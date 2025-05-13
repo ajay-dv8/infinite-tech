@@ -5,14 +5,15 @@ import Picture3 from "../../../public/images/3.jpg";
 import Picture4 from "../../../public/images/4.jpg";
 import Picture5 from "../../../public/images/5.jpg";
 import Picture6 from "../../../public/images/6.jpg";
+// import Video from "../../../public/videos/inf.mp4";
 import Picture7 from "../../../public/images/7.jpg";
 import Image, { StaticImageData } from "next/image";
 import { useScroll, useTransform, motion, MotionValue } from "framer-motion";
 import { useRef } from "react"; 
 
 interface PictureProps {
-  src: StaticImageData; // Use the appropriate type for src, e.g., string | StaticImageData
-  scale?: MotionValue<number> ; // Use the appropriate type for scale, e.g., MotionValue<number>
+  src: string | StaticImageData; // Updated to allow string for video src
+  scale?: MotionValue<number>;
 }
 
 export default function Index() {
@@ -66,7 +67,23 @@ export default function Index() {
           return (
             <motion.div key={index} style={{ scale }} className={'el'}>
               <div className={'imageContainer'}>
-                <Image src={src} fill alt="image" placeholder="blur" />
+                {index === 0 ? (
+                  <div className="relative w-full h-full">
+                    <video
+                      src="/videos/inf.mp4"
+                      autoPlay
+                      loop
+                      muted
+                      className="w-full h-full object-fill"
+                    />
+                    {/* <div className="absolute bottom-4 right-4 bg-opacity-50 text-gray-800">
+                      We bring your ideas to life with cutting-edge technology and
+                      innovative solutions.
+                    </div> */}
+                  </div>
+                ) : (
+                  <Image src={src} fill alt="image" placeholder="blur" />
+                )}
               </div>
             </motion.div>
           );

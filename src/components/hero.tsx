@@ -209,16 +209,76 @@
 //   );
 // }
 
-import React from 'react'
+import React, { useEffect, useRef } from 'react' 
+// import MarqueeText from './marquee-text';
+import gsap from 'gsap';
+import { ScrollTrigger } from 'gsap/all';
 
 export default function Hero() {
-  return (
-    <div className='h-screen flex justify-center items-center flex-col'>
-      <h1 className="w-5xl text-8xl ">Building Scalable, Intelligent Software Solutions</h1>
 
-      <h4 className="text-lg w-3xl">
-      We craft high-performance web and mobile applications tailored to your business goals—powered by modern technologies, driven by real results
-      </h4>
-    </div>
+    const firstText = useRef(null);
+  const secondText = useRef(null);
+  const slider = useRef(null);
+  let xPercent = 0;
+  let direction = -1;
+
+  useEffect( () => {
+    gsap.registerPlugin(ScrollTrigger);
+    gsap.to(slider.current, {
+      scrollTrigger: {
+        trigger: document.documentElement,
+        scrub: 0.25,
+        start: 0,
+        end: window.innerHeight,
+        onUpdate: e => direction = e.direction * -1
+      },
+      x: "-500px",
+    })
+    requestAnimationFrame(animate);
+  }, [])
+
+  const animate = () => {
+    if(xPercent < -100){
+      xPercent = 0;
+    }
+    else if(xPercent > 0){
+      xPercent = -100;
+    }
+    gsap.set(firstText.current, {xPercent: xPercent})
+    gsap.set(secondText.current, {xPercent: xPercent})
+    requestAnimationFrame(animate);
+    xPercent += 0.1 * direction;
+  }
+
+  return (
+    // <div className='h-screen flex justify-center items-center flex-col'>
+    //   <h1 className="w-5xl text-8xl ">Building Scalable, Intelligent Software Solutions</h1>
+
+    //   <h4 className="text-lg w-3xl">
+    //   We craft high-performance web and mobile applications tailored to your business goals—powered by modern technologies, driven by real results
+    //   </h4>
+
+    // </div>
+
+    <main className="relative flex h-screen overflow-hidden z-99">
+      <div className="mt-32 px-24">
+        <h1 className="w-5xl text-8xl ">Building Scalable, Intelligent Software Solutions</h1>
+
+        <h4 className="text-lg w-3xl mt-8 opacity-70">
+          We craft high-performance web and mobile applications tailored to your business goals—powered by modern technologies, driven by real results
+        </h4>
+      </div>
+      {/* <Image 
+        src="/images/background.jpg"
+        fill={true}
+        alt="background"
+      /> */}
+      <div className="absolute top-[calc(100vh-350px)]">
+        <div ref={slider} className="relative opacity-60 whitespace-nowrap">
+          <p ref={firstText} className="relative m-0 text-white text-[230px] font-medium pr-[50px]">Infinite Tech Solutions -</p>
+          <p ref={secondText} className="absolute left-[100%] top-0 text-white text-[230px] font-medium pr-[50px]">Infinite Tech Solutions -</p>
+        </div>
+      </div>
+    </main>
   )
 }
