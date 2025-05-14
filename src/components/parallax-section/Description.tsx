@@ -1,50 +1,90 @@
-import React from "react";
-import Title from "../section-title";
-import { LayersIcon } from "../../../public/icons/layers";
-import Image from "next/image";
+import React, { useEffect, useRef } from "react";
+import gsap from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { processSteps } from "@/constants/process";
 
 export default function Description() {
+  const panelsContainerRef = useRef<HTMLDivElement>(null);
+  const panelsRef = useRef<Array<HTMLElement | null>>([]);
+
+  useEffect(() => {
+    gsap.registerPlugin(ScrollTrigger);
+
+    const panels = panelsRef.current.filter(Boolean) as HTMLElement[];
+    const panelsContainer = panelsContainerRef.current;
+
+    if (!panelsContainer || panels.length === 0) return;
+
+    gsap.to(panels, {
+      xPercent: -100 * (panels.length - 1),
+      ease: "none",
+      scrollTrigger: {
+        trigger: panelsContainer,
+        pin: true,
+        scrub: 1,
+        snap: 1 / (panels.length - 1),
+        end: () => "+=" + (panelsContainer.scrollWidth - window.innerWidth),
+      },
+    });
+
+    // Clean up on unmount
+    return () => {
+      ScrollTrigger.getAll().forEach(trigger => trigger.kill());
+    };
+  }, []);
+
   return (
-    <div className="w-full mt-24">
-      <div className="px-20">
-        <Title
-          topSub="How we do it"
-          title="Our Approach"
-          description="We follow a structured approach to ensure the success of our projects. Our process includes thorough research, planning, design, development, testing, and deployment. We prioritize communication and collaboration with our clients throughout the entire process."
-        />
-      </div>
+    <div id="page" className="site h-full overflow-x-hidden">
+      
+      <section id="panels">
 
-      <div className="my-28">
-        <div className="card flex gap-x-16">
-          {/* media info */}
-          {/* <div className=""> */}
-            <div className="w-96 h-96 bg-gray-200 rounded-md overflow-hidden">
-              <Image
-                width={400}
-                height={600}
-                src="/images/2.jpg"
-                alt="Research"
-                className="object-cover w-full h-full"
-              />
-            </div>
-          {/* </div> */}
+        <div 
+          id="panels-container" 
+          ref={panelsContainerRef} 
+          style={{ width: '500%' }}
+          className=" h-[100vh] flex flex-nowrap p-0 overflow-hidden bg-[#eff1f5]" 
+        >
+          {processSteps.map((process, idx) => (
+            <article
+              key={process.number}
+              ref={el => { panelsRef.current[idx] = el; }}
+              className={`relative flex flex-col  text-left w-full h-full overflow-hidden ${process?.number % 2 === 0 ? "gradient-blue" : "gradient-green"}`}
+              id={`panel-${process}`}
+            >
+              {/* ...panel content... */}
+                {/* number and title with opacity */}
+              <div className="">
+                <h3 className="p-2 rounded-full text-black text-8xl font-extrabold opacity-10 mx-8">
+                  0{process.number}.
+                </h3>
 
-          {/* text info */}
-          <div className="flex flex-col gap-y-6">
-            <div className="flex gap-x-6">
-              <LayersIcon />
-              <h2 className="text-4xl font-semibold">Research</h2>
-            </div>
-            <p className="w-sm text-lg leading-8 opacity-90 pl-6">
-              We conduct thorough research to understand the client&apos;s needs
-              and the market landscape. We conduct thorough research to
-              understand the client&apos;s needs and the market landscape. We
-              conduct thorough research to understand the client&apos;s needs
-              and the market landscape.
-            </p>
-          </div>
+                <div className="text-gray-800 text-9xl font-bold ml-32 opacity-10">
+                  {process.title}
+                </div>
+              </div>
+
+              {/* media div */}
+              <div className="w-full flex justify-center">
+                <div className="bg-amber-400 w-[720px] aspect-video h-full"></div>
+
+              </div>
+
+              <div className="flex mt-8 gap-x-12">
+                <div className="text-gray-800 text-xl font-bold ml-32 ">
+                  {process.number} {' '} {process.title}
+                </div>
+
+                <div className="text-black w-2xl flex items-center justify-center">
+                  {process.description}
+                </div>
+              </div>
+            </article>
+          ))}
         </div>
-      </div>
+      </section>
+      {/* ...existing code... */}
     </div>
   );
 }
+
+

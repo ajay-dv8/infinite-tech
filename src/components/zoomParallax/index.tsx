@@ -66,7 +66,7 @@ export default function Index() {
         {pictures.map(({ src, scale }, index) => {
           return (
             <motion.div key={index} style={{ scale }} className={'el'}>
-              <div className={'imageContainer'}>
+              <div className={'imageContainer bg-[#eff1f5]'}>
                 {index === 0 ? (
                   <div className="relative w-full h-full">
                     <video
