@@ -71,7 +71,7 @@ export default function Description() {
 
               <div className="flex mt-8 gap-x-12">
                 <div className="text-gray-800 text-xl font-bold ml-32 ">
-                  {process.number} {' '} {process.title}
+                  {process.number}. {' '} {process.title}
                 </div>
 
                 <div className="text-black w-2xl flex items-center justify-center">
@@ -82,7 +82,7 @@ export default function Description() {
           ))}
         </div>
       </section>
-      {/* ...existing code... */}
+      {/* chaskele */}
     </div>
   );
 }
