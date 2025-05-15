@@ -260,11 +260,11 @@ export default function Hero() {
 
     // </div>
 
-    <main className="relative flex h-screen overflow-hidden z-99">
-      <div className="mt-32 px-24">
-        <h1 className="w-5xl text-8xl ">Building Scalable, Intelligent Software Solutions</h1>
+    <main className="reletive w-full flex h-screen overflow-hidden z-99">
+      <div className="mt-64 md:mt-32 px-4 md:px-24">
+        <h1 className="w-full md:w-5xl text-4xl md:text-8xl ">Building Scalable, Intelligent Software Solutions</h1>
 
-        <h4 className="text-lg w-3xl mt-8 opacity-70">
+        <h4 className="w-full md:text-lg md:w-3xl mt-4 md:mt-8 opacity-60">
           We craft high-performance web and mobile applications tailored to your business goals—powered by modern technologies, driven by real results
         </h4>
       </div>
@@ -273,10 +273,10 @@ export default function Hero() {
         fill={true}
         alt="background"
       /> */}
-      <div className="absolute top-[calc(100vh-350px)]">
+      <div className="absolute overflow-hidden top-[calc(100vh-150px)] md:top-[calc(100vh-350px)]">
         <div ref={slider} className="relative opacity-60 whitespace-nowrap">
-          <p ref={firstText} className="relative m-0 text-white text-[230px] font-medium pr-[50px]">Infinite Tech Solutions -</p>
-          <p ref={secondText} className="absolute left-[100%] top-0 text-white text-[230px] font-medium pr-[50px]">Infinite Tech Solutions -</p>
+          <p ref={firstText} className="relative m-0 text-white text-7xl md:text-[230px] font-medium pr-[50px]">Infinite Tech Solutions -</p>
+          <p ref={secondText} className="absolute left-[100%] top-0 text-white text-7xl md:text-[230px] font-medium pr-[50px]">Infinite Tech Solutions -</p>
         </div>
       </div>
     </main>

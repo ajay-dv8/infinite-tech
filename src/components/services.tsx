@@ -5,13 +5,14 @@ import { services } from '@/constants/services';
 
 export default function Services() {
   return (
-    <div className="flex justify-between px-20 mb-20">
+    <div className="flex flex-col md:flex-row md:justify-between px-4 md:px-20 mb-20">
       {/* Sticky Title Column */}
-      <div className=" sticky top-28 self-start">
+      <div className=" md:sticky md:top-28 self-start">
         <Title
           title="Services"
           topSub="What we do"
           description="We offer end-to-end software development solutions tailored to your business needs."
+          className='mb-14'
         />
       </div>
 

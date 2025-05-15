@@ -6,7 +6,7 @@ const paragraphText = `We are a forward-thinking software development company fo
 
 export default function About() {
   return (
-    <section className="p-20 justify-center">
+    <section className="p-4 md:p-20 justify-center">
       <Paragraph paragraph={paragraphText} />
     </section>
   );

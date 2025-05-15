@@ -17,7 +17,7 @@ export default function Paragraph({ paragraph }: ParagraphProps) {
   return (
     <p
       ref={container}
-      className="flex flex-wrap justify-center text-center text-white text-4xl  p-10 max-w-[1280px] mx-auto"
+      className="flex flex-wrap justify-center text-center text-white text-lg md:text-4xl px-4 md:p-10 md:max-w-[1280px] md:mx-auto overflow-hidden"
     >
       {words.map((word, i) => {
         const start = i / words.length;
