@@ -9,6 +9,7 @@ import Intro from "@/components/parallax-section/Intro";
 import Section from "@/components/parallax-section/section";
 import Services from "@/components/services";
 import { TechStack } from "@/components/tech-stack";
+import { Testimonials } from "@/components/testimonials";
 import WorksCompleted from "@/components/works-completed";
 import ZoomParallax from "@/components/zoomParallax";
 import Lenis from "lenis";
@@ -48,6 +49,7 @@ export default function Home() {
         {/* <div className='h-screen'></div> */}
         </div> 
         <WorksCompleted />
+        <Testimonials />
         <Connect /> 
       </ReactLenis>
     </div>
