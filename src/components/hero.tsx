@@ -257,7 +257,6 @@ export default function Hero() {
     //   <h4 className="text-lg w-3xl">
     //   We craft high-performance web and mobile applications tailored to your business goals—powered by modern technologies, driven by real results
     //   </h4>
-
     // </div>
 
     <main className="reletive w-full flex h-screen overflow-hidden z-99">
@@ -273,9 +272,9 @@ export default function Hero() {
         fill={true}
         alt="background"
       /> */}
-      <div className="absolute overflow-hidden top-[calc(100vh-150px)] md:top-[calc(100vh-350px)]">
+      <div className="absolute top-[calc(100vh-150px)] md:top-[calc(100vh-350px)]">
         <div ref={slider} className="relative opacity-60 whitespace-nowrap">
-          <p ref={firstText} className="relative m-0 text-white text-7xl md:text-[230px] font-medium pr-[50px]">Infinite Tech Solutions -</p>
+          <p ref={firstText} className="relative m-0 text-white text-7xl md:text-[230px] font-medium pr-[50px]">Infinite Tech Solutions </p>
           <p ref={secondText} className="absolute left-[100%] top-0 text-white text-7xl md:text-[230px] font-medium pr-[50px]">Infinite Tech Solutions -</p>
         </div>
       </div>

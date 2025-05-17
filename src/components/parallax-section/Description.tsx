@@ -60,7 +60,7 @@ export default function Description() {
           className="relative flex flex-col items-center justify-center text-left w-full h-full overflow-hidden"
         >
           <h1 className="text-6xl md:text-8xl font-bold text-gray-800 mb-6">
-            Our Process
+            Our Process 
           </h1>
           <p className="text-xl md:text-2xl text-gray-600 max-w-3xl text-center">
             We follow a systematic approach to turn your ideas into reality. 

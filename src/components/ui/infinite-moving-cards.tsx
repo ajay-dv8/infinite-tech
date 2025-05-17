@@ -1,8 +1,6 @@
 "use client";
 
 import { infiniteScrollTypes } from "@/lib/types";
-// import { industries } from "@/constants/services";
-// import { industries } from "@/constants/services";
 import { cn } from "@/lib/utils";
 import React, { useEffect, useState } from "react";
 
