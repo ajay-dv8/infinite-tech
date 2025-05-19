@@ -35,17 +35,6 @@ export default function Description() {
 
   return (
     <div id="page" className="site h-full overflow-x-hidden">
-      
-       {/* Title Section */}
-      {/* <section className="h-screen w-full flex flex-col items-center justify-center bg-[#eff1f5] px-4">
-        <h1 className="text-6xl md:text-8xl font-bold text-gray-800 mb-6">
-          Our Process
-        </h1>
-        <p className="text-xl md:text-2xl text-gray-600 max-w-3xl text-center">
-          We follow a systematic approach to turn your ideas into reality. 
-          Scroll down to explore our step-by-step process.
-        </p>
-      </section> */}
 
       <section id="panels">
         <div 
@@ -57,12 +46,12 @@ export default function Description() {
           {/* Title Panel */}
         <article 
           ref={el => { panelsRef.current[0] = el; }}
-          className="relative flex flex-col items-center justify-center text-left w-full h-full overflow-hidden"
+          className="relative flex flex-col items-center justify-center w-full h-full overflow-hidden"
         >
-          <h1 className="text-6xl md:text-8xl font-bold text-gray-800 mb-6">
+          <h1 className="text-4xl md:text-8xl font-bold text-gray-800 mb-4 md:mb-6">
             Our Process 
           </h1>
-          <p className="text-xl md:text-2xl text-gray-600 max-w-3xl text-center">
+          <p className="text-lg md:text-2xl text-gray-600 max-w-3xl text-center px-3">
             We follow a systematic approach to turn your ideas into reality. 
             Scroll down to explore our step-by-step process.
           </p>
@@ -73,32 +62,40 @@ export default function Description() {
             <article
               key={process.number}
               ref={el => { panelsRef.current[idx + 1] = el; }} // Offset by 1 for title panel | remove '+ 1' if no title on slide
-              className={`relative flex flex-col  text-left w-full h-full overflow-hidden ${process?.number % 2 === 0 ? "gradient-blue" : "gradient-green"}`}
+              className={`relative flex flex-col justify-center text-left w-full h-full overflow-hidden ${process?.number % 2 === 0 ? "gradient-blue" : "gradient-green"}`}
               id={`panel-${process}`}
             >
               {/* ...panel content... */}
-                {/* number and title with opacity */}
+              {/* number and title with opacity */}
               <div className="">
-                <h3 className="p-2 rounded-full text-black text-8xl font-extrabold opacity-10 mx-8">
+                <h3 className="p-2 rounded-full text-black text-2xl md:text-8xl font-extrabold opacity-10 mx-8">
                   0{process.number}.
                 </h3>
 
-                <div className="text-gray-800 text-9xl font-bold ml-32 opacity-10">
+                <div className="text-gray-800 text-2xl md:text-9xl font-bold ml-16 md:ml-32 opacity-10">
                   {process.title}
                 </div>
               </div>
 
               {/* media div */}
               <div className="w-full flex justify-center">
-                <div className="bg-violet-500 w-[720px] aspect-video h-full"></div>
+                <div className="bg-red-500 w-[80%] md:w-[720px] aspect-video h-full">
+                  {/* <video
+                    src={process.video}
+                    autoPlay
+                    loop
+                    muted
+                    className="w-full h-full object-fill"
+                  /> */}
+                </div>
               </div>
 
-              <div className="flex mt-8 gap-x-12">
-                <div className="text-gray-800 text-xl font-bold ml-32 ">
+              <div className="flex flex-col md:flex-row px-4 mt-8 md:gap-x-12 w-full">
+                <div className="text-gray-800 text-xl font-bold md:ml-32 ">
                   0{process.number}. {' '} {process.title}
                 </div>
 
-                <div className="text-black w-2xl flex items-center justify-center">
+                <div className="w-full text-gray-700 text-sm md:text-base md:w-2xl flex items-center justify-center px-1 md:px-0.5">
                   {process.description}
                 </div>
               </div>

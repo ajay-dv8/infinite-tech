@@ -15,7 +15,7 @@ export default function Section() {
   return (
     <div
       ref={container}
-      className="relative flex items-center justify-center h-screen overflow-hidden"
+      className="w-full relative flex items-center justify-center h-screen overflow-hidden"
       style={{ clipPath: "polygon(0% 0, 100% 0%, 100% 100%, 0 100%)" }}
     >
       <div className="relative z-10 p-20 mix-blend-difference text-white w-full h-full flex flex-col justify-between">
@@ -24,7 +24,7 @@ export default function Section() {
           Blending human insight with cutting-edge technology to craft solutions that empower your business and deliver real, lasting results.
         </p>
 
-        <p className="text-[5vw] uppercase mix-blend-difference">
+        <p className="w-full text-2xl uppercase mix-blend-difference">
           Infinit tech solutions
         </p>
       </div>

@@ -76,14 +76,14 @@ export const Testimonials = () => {
           viewport={{ once: true }}
           className="flex flex-col items-center justify-center mx-auto"
         >
-          <section className="my-40 w-full flex flex-col items-center justify-center bg-[#eff1f5] px-4">
-            <p className="text-lg md:text-xl text-gray-500 max-w-3xl text-center my-10">
+          <section className="my-16 md:my-40 w-full flex flex-col items-center justify-center bg-[#eff1f5] px-4">
+            <p className="text-base md:text-xl text-gray-500 max-w-3xl text-center my-10">
               What our clients think about us
             </p>
-            <h1 className="text-6xl md:text-8xl font-bold text-gray-800 mb-6">
+            <h1 className="text-4xl md:text-8xl font-bold text-gray-800 mb-6">
               Testimonials
             </h1>
-            <p className="text-xl md:text-2xl text-gray-600 max-w-3xl text-center">
+            <p className="text-base md:text-2xl text-gray-600 max-w-3xl text-center">
               We follow a systematic approach to turn your ideas into reality. 
               Scroll down to explore our step-by-step process.
             </p>
