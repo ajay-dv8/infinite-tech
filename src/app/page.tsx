@@ -1,5 +1,6 @@
 'use client'
 import About from "@/components/about";
+import Contact from "@/components/contact";
 import { Connect } from "@/components/cta";
 import HeroGeometric from "@/components/hero"; 
 import { Industries } from "@/components/industries"; 
@@ -31,7 +32,7 @@ export default function Home() {
   }, [])
   
   return (
-    <div className="">
+    <div className="overflow-hidden">
       <ReactLenis root>
         <HeroGeometric />
         <About />
@@ -40,7 +41,7 @@ export default function Home() {
         <Services />
         <TechStack/>
         <div className={""}>
-            <ZoomParallax />
+          <ZoomParallax />
         </div>
         <div className="">
           <Intro />
@@ -51,6 +52,7 @@ export default function Home() {
         <WorksCompleted />
         <Testimonials />
         <Connect /> 
+        <Contact />
       </ReactLenis>
     </div>
   );
