@@ -1,18 +1,18 @@
 
 import React from 'react';
-import Title from './section-title';
+import { FullTitle } from './section-title';
 import { services } from '@/constants/services';
 
 export default function Services() {
   return (
-    <div className="flex flex-col md:flex-row md:justify-between px-4 md:px-20 mb-20">
+    <div className="flex flex-col md:flex-row md:justify-between px-4 md:px-20 mb-0 md:mb-20">
       {/* Sticky Title Column */}
       <div className="md:sticky md:top-28 self-start">
-        <Title
+        <FullTitle
           title="Services"
           topSub="What we do"
           description="We offer end-to-end software development solutions tailored to your business needs."
-          className='mb-14'
+          className='mb-14 text-white'
         />
       </div>
 

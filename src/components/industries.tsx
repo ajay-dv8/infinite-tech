@@ -13,7 +13,7 @@ export function Industries() {
         topSub="Industries we caca serve"
         description="We have experience in a wide range of industries, including but not
           limited to:"
-        className="px-4 md:px-20 my-10"
+        className="px-4 md:px-20 my-3 md:my-10"
         titleClassName="text-[#eff1f5]"
       />
       {/* <div className="flex flex-col gap-y-10"> */}

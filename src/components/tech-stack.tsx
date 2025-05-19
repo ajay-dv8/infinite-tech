@@ -40,7 +40,7 @@ export function TechStack() {
   };
 
   return (
-    <div className="my-48">
+    <div className="md:my-48 my-20">
       <motion.div
         className="w-full px-16"
         ref={textContainerRef}
