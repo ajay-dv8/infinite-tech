@@ -29,10 +29,10 @@ export default function Home() {
     }
   
     requestAnimationFrame(raf)
-  }, [])
+  }, []);
   
   return (
-    <div className="overflow-hidden">
+    <div className="">
       <ReactLenis root>
         <HeroGeometric />
         <About />
