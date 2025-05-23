@@ -2,12 +2,8 @@
 
 import * as React from "react";
 import Link from "next/link";
-import { cn } from "@/lib/utils";
-// import { DIcons } from "dicons";
+import { cn } from "@/lib/utils"; 
 import { useAnimate } from "framer-motion";
-
-// import { Button, buttonVariants } from "@/components/ui/button";
-
 import { HighlighterItem, HighlightGroup, Particles } from "@/components/ui/highlighter";
 import { PenToolIcon } from "../../public/icons/pen";
 import { CartIcon } from "../../public/icons/cart";
@@ -117,8 +113,9 @@ export function Connect() {
                           d="M12 5.50676L0 0L2.83818 13L6.30623 7.86537L12 5.50676V5.50676Z"
                         />
                       </svg>
+                      {/* cursor */}
                       <span className="bg-ali relative -top-1 left-3 rounded-3xl px-2 py-1 text-xs text-white">
-                        Ali
+                        I.T.S
                       </span>
                     </div>
                   </div>
@@ -127,7 +124,7 @@ export function Connect() {
                     <div className="flex flex-col items-center">
                       <h3 className="mt-6   pb-1 font-bold ">
                         <span className="text-2xl md:text-4xl">
-                          Any questions about Design?
+                          Any questions about Design? 
                         </span>
                       </h3>
                     </div>

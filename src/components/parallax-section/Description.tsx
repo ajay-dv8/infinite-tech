@@ -41,7 +41,7 @@ export default function Description() {
           id="panels-container" 
           ref={panelsContainerRef} 
           style={{ width: '500%' }}
-          className=" h-[100vh] flex flex-nowrap p-0 overflow-hidden bg-[#eff1f5]" 
+          className=" h-[100vh] flex flex-nowrap overflow-hidden " 
         >
           {/* Title Panel */}
         <article 

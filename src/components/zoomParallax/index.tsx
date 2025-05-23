@@ -65,7 +65,7 @@ export default function Index() {
         {pictures.map(({ src, scale }, index) => {
           return (
             <motion.div key={index} style={{ scale }} className={'el'}>
-              <div className={'imageContainer bg-[#eff1f5]'}>
+              <div className={'imageContainer'}>
                 {index === 0 ? (
                   <div className="relative w-full h-full">
                     <video
@@ -73,7 +73,7 @@ export default function Index() {
                       autoPlay
                       loop
                       muted
-                      className="w-full h-full object-fill"
+                      className="w-full h-full object-fill bg-[#eff1f5]"
                     />
                     {/* <div className="absolute bottom-4 right-4 bg-opacity-50 text-gray-800">
                       We bring your ideas to life with cutting-edge technology and
@@ -81,7 +81,13 @@ export default function Index() {
                     </div> */}
                   </div>
                 ) : (
-                  <Image src={src} fill alt="image" placeholder="blur" />
+                  <Image 
+                    src={src} 
+                    fill 
+                    alt="image" 
+                    placeholder="blur" 
+                    className="hidden md:block"
+                  />
                 )}
               </div>
             </motion.div>

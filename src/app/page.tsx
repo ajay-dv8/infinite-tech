@@ -1,7 +1,7 @@
 'use client'
 import About from "@/components/about";
-import Contact from "@/components/contact";
-import { Connect } from "@/components/cta";
+import { Contact } from "@/components/contact";
+// import { Connect } from "@/components/cta";
 import HeroGeometric from "@/components/hero"; 
 import { Industries } from "@/components/industries"; 
 import Line from "@/components/line";
@@ -43,7 +43,7 @@ export default function Home() {
         <div className={""}>
           <ZoomParallax />
         </div>
-        <div className="">
+        <div className="bg-[#eff1f5]">
           <Intro />
           <Description />
           <Section />
@@ -51,7 +51,7 @@ export default function Home() {
         </div> 
         <WorksCompleted />
         <Testimonials />
-        <Connect /> 
+        {/* <Connect />  */}
         <Contact />
       </ReactLenis>
     </div>
