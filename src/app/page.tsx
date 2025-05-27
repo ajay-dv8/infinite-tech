@@ -1,6 +1,7 @@
 'use client'
 import About from "@/components/about";
 import { Contact } from "@/components/contact";
+import { Footer } from "@/components/footer";
 // import { Connect } from "@/components/cta";
 import HeroGeometric from "@/components/hero"; 
 import { Industries } from "@/components/industries"; 
@@ -53,6 +54,7 @@ export default function Home() {
         <Testimonials />
         {/* <Connect />  */}
         <Contact />
+        <Footer/>
       </ReactLenis>
     </div>
   );

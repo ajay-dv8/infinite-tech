@@ -14,16 +14,20 @@ interface generalInfoProps {
   phoneLabel?: string
   phoneDescription?: string
   phone?: string
+
+  emailLink?: string
+  phoneLink?: string
 }
 
 export const generalInfo: generalInfoProps = {
   shortName:"ITS",
-  name: "Infinite",
-  fullName: "Infinite Tech Solutions",
+  name: "Infinit",
+  fullName: "Infinit Tech Solutions",
   // email
   emailLabel: "Email",
   emailDescription: "We respond to all emails within 24 hours.",
-  email: "example@shadcnblocks.com",
+  emailLink: "infinittechsolutions.info@gmail.com",
+  email: "info@its.com",
   // office location
   officeLabel: "Office",
   officeDescription: "Drop by our office for a chat.",
@@ -31,5 +35,6 @@ export const generalInfo: generalInfoProps = {
   // phone line
   phoneLabel: "Phone",
   phoneDescription: "We're available Mon-Fri, 9am-5pm.",
-  phone: "+123 456 7890",
+  phone: "+233 50 647 0919",
+  phoneLink: "+233506470919"
 }

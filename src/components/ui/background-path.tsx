@@ -24,9 +24,9 @@ function FloatingPaths({ position }: { position: number }) {
         viewBox="0 0 696 316"
         fill="none"
       >
-        {/* <title className="text-[#eff1f5]">
+        <title className="text-[#eff1f5] z-50">
           Building Scalable, Intelligent Software Solutions
-        </title> */}
+        </title>
         {paths.map((path) => (
           <motion.path
             key={path.id}
@@ -73,9 +73,9 @@ export function BackgroundPaths({
           transition={{ duration: 1 }}
           className="max-w-4xl mx-auto"
         >
-          <h1 className="relative text-5xl sm:text-7xl md:text-8xl font-bold mb-8 tracking-tighter text-[#eff1f5]">
+          <h1 className="relative text-5xl sm:text-7xl md:text-8xl font-bold mb-8 tracking-tighter text-[#eff1f5] z-50">
             {words.map((word, wordIndex) => (
-              <span
+              <div
                 key={wordIndex}
                 className="relative inline-block mr-4 text-[#eff1f5] last:mr-0"
               >
@@ -96,7 +96,7 @@ export function BackgroundPaths({
                     {letter}
                   </motion.span>
                 ))}
-              </span>
+              </div>
             ))}
           </h1>
 
@@ -108,12 +108,12 @@ export function BackgroundPaths({
                             group-hover:-translate-y-0.5 border border-black/10
                             hover:shadow-md"
             >
-              <span className="opacity-90 group-hover:opacity-100 transition-opacity">
+              <div className="opacity-90 group-hover:opacity-100 transition-opacity">
                 Discover Excellence
-              </span>
-              <span className="ml-3 opacity-70 group-hover:opacity-100 group-hover:translate-x-1.5 transition-all duration-300">
+              </div>
+              <div className="ml-3 opacity-70 group-hover:opacity-100 group-hover:translate-x-1.5 transition-all duration-300">
                 →
-              </span>
+              </div>
             </Button>
           </div>
         </motion.div>

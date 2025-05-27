@@ -4,6 +4,10 @@ export const navLinks = [
     title: "About",
     href: "#about", 
   },
+  // {
+  //   title: "Industries",
+  //   href: "#industries",
+  // },
   {
     title: "Services",
     href: "#service", 
@@ -12,12 +16,16 @@ export const navLinks = [
     title: "case study",
     href: "#work", 
   },
-  {
-    title: "Process",
-    href: "#process", 
-  },
   // {
-  //   title: "Contact",
-  //   href: "contact", 
+  //   title: "Process",
+  //   href: "#process", 
   // },
+  {
+    title: "Testimonials",
+    href: "#testimonials",
+  },
+  {
+    title: "Contact",
+    href: "contact", 
+  },
 ]
