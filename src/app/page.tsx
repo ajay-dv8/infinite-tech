@@ -2,8 +2,10 @@
 import About from "@/components/about";
 import { Contact } from "@/components/contact";
 import { Footer } from "@/components/footer";
+// import Hero from "@/components/hero";
 // import { Connect } from "@/components/cta";
 import HeroGeometric from "@/components/hero"; 
+import Beams from "@/components/heroBg";
 import { Industries } from "@/components/industries"; 
 import Line from "@/components/line";
 import Description from "@/components/parallax-section/Description";
@@ -35,6 +37,18 @@ export default function Home() {
   return (
     <div className="">
       <ReactLenis root>
+        <div style={{ width: '100%', height: '600px', position: 'relative' }}>
+          <Beams
+            beamWidth={2}
+            beamHeight={15}
+            beamNumber={12}
+            lightColor="#ffffff"
+            speed={2}
+            noiseIntensity={1.75}
+            scale={0.2}
+            rotation={0}
+          />
+        </div>
         <HeroGeometric />
         <About />
         <Industries />
