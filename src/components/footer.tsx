@@ -70,7 +70,7 @@ export const Footer = () => {
       className="flex w-full items-center overflow-hidden bg-slate-950 "
       ref={containerRef}
     >
-      <div className="">
+      <div className="mt-10">
         <div className="text-center absolute text-gray-400 text-sm px-4 md:px-20 py-2">
          &copy; {new Date().getFullYear()} {generalInfo.fullName}. All rights reserved.
         </div>
