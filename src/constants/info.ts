@@ -17,6 +17,8 @@ interface generalInfoProps {
 
   emailLink?: string
   phoneLink?: string
+
+  // tiktok: ;
 }
 
 export const generalInfo: generalInfoProps = {

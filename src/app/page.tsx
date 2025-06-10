@@ -4,7 +4,7 @@ import { Contact } from "@/components/contact";
 import { Footer } from "@/components/footer";
 import { HeroBg } from "@/components/hero";
 import { Industries } from "@/components/industries"; 
-import Line from "@/components/line";
+// import Line from "@/components/line";
 import Description from "@/components/parallax-section/Description";
 import Intro from "@/components/parallax-section/Intro";
 import Section from "@/components/parallax-section/section";
@@ -37,7 +37,7 @@ export default function Home() {
         <HeroBg />
         <About />
         <Industries />
-        <Line />
+        {/* <Line /> */}
         <Services />
         <TechStack/>
         <div className={""}>
@@ -52,11 +52,11 @@ export default function Home() {
         <Testimonials />
         <Contact />
         {/* <Footer/> */}
-        <div className='relative h-[500px] md:h-[720px] bottom-0 '
+        <div className='relative h-[500px] md:h-[500px] bottom-0 '
           style={{clipPath: "polygon(0% 0, 100% 0%, 100% 100%, 0 100%)"}}
         > 
           <div className='relative h-[calc(100vh+720px)] md:h-[calc(100vh+500px)] -top-[100vh]'> 
-            <div className='h-[720px] md:h-[500px] sticky top-[calc(100vh-720px)] md:top-[calc(100vh-500px)]'> 
+            <div className='h-[500px] md:h-[500px] sticky top-[calc(100vh-720px)] md:top-[calc(100vh-500px)]'> 
               <Footer />
             </div> 
           </div> 

@@ -1,3 +1,4 @@
+
 "use client";
 
 import { useState, useEffect } from 'react';
@@ -54,7 +55,7 @@ export default function Navbar() {
               >
                 <Link
                   href={link.href}
-                  className="relative px-3 py-2 text-white/90 hover:text-white text-sm lg:text-base uppercase tracking-wider group transition-colors duration-300"
+                  className="relative px-3 py-2 text-white/90 hover:text-white text-sm lg:text-base  tracking-wider group transition-colors duration-300"
                 >
                   <span className="relative z-10">{link.title}</span>
                   <motion.span
