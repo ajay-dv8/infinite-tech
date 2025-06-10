@@ -2,10 +2,7 @@
 import About from "@/components/about";
 import { Contact } from "@/components/contact";
 import { Footer } from "@/components/footer";
-// import Hero from "@/components/hero";
-// import { Connect } from "@/components/cta";
-import HeroGeometric from "@/components/hero"; 
-import Beams from "@/components/heroBg";
+import { HeroBg } from "@/components/hero";
 import { Industries } from "@/components/industries"; 
 import Line from "@/components/line";
 import Description from "@/components/parallax-section/Description";
@@ -37,19 +34,7 @@ export default function Home() {
   return (
     <div className="">
       <ReactLenis root>
-        <div style={{ width: '100%', height: '600px', position: 'relative' }}>
-          <Beams
-            beamWidth={2}
-            beamHeight={15}
-            beamNumber={12}
-            lightColor="#ffffff"
-            speed={2}
-            noiseIntensity={1.75}
-            scale={0.2}
-            rotation={0}
-          />
-        </div>
-        <HeroGeometric />
+        <HeroBg />
         <About />
         <Industries />
         <Line />
@@ -62,13 +47,20 @@ export default function Home() {
           <Intro />
           <Description />
           <Section />
-        {/* <div className='h-screen'></div> */}
         </div> 
         <WorksCompleted />
         <Testimonials />
-        {/* <Connect />  */}
         <Contact />
-        <Footer/>
+        {/* <Footer/> */}
+        <div className='relative h-[500px] md:h-[720px] bottom-0 '
+          style={{clipPath: "polygon(0% 0, 100% 0%, 100% 100%, 0 100%)"}}
+        > 
+          <div className='relative h-[calc(100vh+720px)] md:h-[calc(100vh+500px)] -top-[100vh]'> 
+            <div className='h-[720px] md:h-[500px] sticky top-[calc(100vh-720px)] md:top-[calc(100vh-500px)]'> 
+              <Footer />
+            </div> 
+          </div> 
+        </div>
       </ReactLenis>
     </div>
   );

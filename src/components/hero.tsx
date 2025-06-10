@@ -1,18 +1,23 @@
 "use client";
 
-import { BackgroundPaths } from "./ui/background-path";
+import { ChromeGrid } from "./heroBg";
 
-export default function Hero() {
+const HeroBg = () => {
   return (
-    <main className="reletive w-full flex h-screen overflow-hidden z-99">
-      {/* <div className="mt-64 md:mt-32 px-4 md:px-24">
-        <h1 className="w-full md:w-5xl text-4xl md:text-8xl ">Building Scalable, Intelligent Software Solutions</h1>
+    <div className="h-svh w-screen">
+      <ChromeGrid/>
+      <div className="absolute z-10 left-1/2 -translate-x-1/2 top-1/2 -translate-y-1/2 pointer-events-none flex flex-col justify-center items-center text-center w-full md:w-4xl lg:w-2/3">
+          <h1 className="text-4xl md:text-6xl font-normal mb-4 tracking-widest text-white pl-2 pr-6">
+            Transforming Ideas Into Digital Excellence
+          </h1>
+          <p className="text-sm w-full pl-4 pr-8 md:w-xl md:text-base text-white/70 font-mono tracking-wide pointer-events-none">
+            Crafting innovative software solutions that drive your business forward with cutting-edge technology and exceptional user experiences.
+          </p>
+      </div>
+    </div>
+  );
+};
 
-        <h4 className="w-full md:text-lg md:w-3xl mt-4 md:mt-8 opacity-60">
-          We craft high-performance web and mobile applications tailored to your business goals—powered by modern technologies, driven by real results
-        </h4>
-      </div> */}
-      <BackgroundPaths title="Building Scalable, Intelligent Software Solutions" />
-    </main>
-  )
-}
+export { HeroBg };
+
+
