@@ -20,7 +20,7 @@ export default function Title({ className, title, topSub, description }: TitlePr
 }
 
 
-// import React from 'react'
+
 
 export function FullTitle({ topSub, title, description, titleClassName, className }: TitleProps) {
   return (

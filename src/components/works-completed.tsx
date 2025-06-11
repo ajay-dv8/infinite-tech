@@ -1,5 +1,6 @@
 import { completedProjects } from '@/constants/works'
 import { FullTitle } from './section-title'
+import CountUp from './ui/number-counter'
 
 export default function WorksCompleted() {
   return (
@@ -21,7 +22,15 @@ export default function WorksCompleted() {
           >
             <div className="flex flex-col gap-4 md:gap-6 items-center text-center">
               <h3 className="text-4xl md:text-6xl lg:text-8xl font-extrabold text-gray-700">
-                {works.quantity}
+                <CountUp
+                  from={0}
+                  to={works.quantity}
+                  startWhen={true}
+                  separator=","
+                  direction="up"
+                  duration={1}
+                  className="count-up-text"
+                />
                 <span className="text-gray-700">+</span>
               </h3>
               <h4 className="text-base md:text-xl lg:text-2xl font-semibold text-gray-700 opacity-70">
@@ -35,35 +44,3 @@ export default function WorksCompleted() {
   )
 }
 
-
-
-
-
-
-
-
-
-// import { completedProjects } from '@/constants/works'
-// import React from 'react'
-
-// export default function WorksCompleted() {
-//   return (
-//     <div className='px-20 w-full py-20 flex justify-around bg-[#eff1f5]'>
-//       {completedProjects.map((works, index) => (
-//         <div 
-//           key={index}
-//           className="flex"
-//         >
-//           <div className="flex flex-col gap-8 items-baseline">
-//             <h3 className="text-8xl font-extrabold text-gray-600 opacity-180">
-//               {works.quantity}+
-//             </h3>
-//             <h4 className="text-2xl font-semibold text-gray-800">
-//               {works.title}
-//             </h4>
-//           </div>
-//         </div>
-//       ))}
-//     </div>
-//   )
-// }

@@ -2,6 +2,7 @@ import React, { useEffect, useRef } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { processSteps } from "@/constants/process";
+import { FullTitle } from "../section-title";
 
 export default function Description() {
   const panelsContainerRef = useRef<HTMLDivElement>(null);
@@ -48,21 +49,29 @@ export default function Description() {
           ref={el => { panelsRef.current[0] = el; }}
           className="relative flex flex-col items-center justify-center w-full h-full overflow-hidden"
         >
-          <h1 className="text-4xl md:text-8xl font-bold text-gray-800 mb-4 md:mb-6">
+          {/* <h1 className="text-4xl md:text-8xl font-bold text-gray-800 mb-4 md:mb-6">
             Our Process 
           </h1>
           <p className="text-lg md:text-2xl text-gray-600 max-w-3xl text-center px-3">
             We follow a systematic approach to turn your ideas into reality. 
             Scroll down to explore our step-by-step process.
-          </p>
+          </p> */}
+          <FullTitle
+            title="Our Process"
+            description="We follow a systematic approach to turn your ideas into reality. Scroll down to explore our step-by-step process."
+            topSub="How we do it"
+            className="text-gray-800 overflow-hidden"
+          />
         </article>
+
+        
 
           {/* Process Steps Panels */}
           {processSteps.map((process, idx) => (
             <article
               key={process.number}
               ref={el => { panelsRef.current[idx + 1] = el; }} // Offset by 1 for title panel | remove '+ 1' if no title on slide
-              className={`relative flex flex-col justify-center text-left w-full h-full overflow-hidden ${process?.number % 2 === 0 ? "gradient-blue" : "gradient-green"}`}
+              className={`relative bg-[#eff1f5] flex flex-col justify-center text-left w-full h-full overflow-hidden ${process?.number % 2 === 0 ? "gradient-blue" : "gradient-green"}`}
               id={`panel-${process}`}
             >
               {/* ...panel content... */}
@@ -72,21 +81,22 @@ export default function Description() {
                   0{process.number}.
                 </h3>
 
-                <div className="text-gray-800 text-2xl md:text-9xl font-bold ml-16 md:ml-32 opacity-10">
+                <div className="text-gray-800 text-2xl md:text-6xl font-bold ml-16 md:ml-32 opacity-10">
                   {process.title}
                 </div>
               </div>
 
               {/* media div */}
+              {/* change md:width  */}
               <div className="w-full flex justify-center">
-                <div className="bg-red-500 w-[80%] md:w-[720px] aspect-video h-full">
-                  {/* <video
+                <div className="w-[80%] md:w-[720px] aspect-video h-full">
+                  <video
                     src={process.video}
                     autoPlay
                     loop
                     muted
-                    className="w-full h-full object-fill"
-                  /> */}
+                    className="w-full h-full object-fill rounded-lg"
+                  />
                 </div>
               </div>
 
