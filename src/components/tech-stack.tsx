@@ -61,7 +61,7 @@ export function TechStack() {
           type="image"
           items={stack}
           direction="left"
-          speed="fast"
+          speed="slow"
         />
       </div>
 
