@@ -3,8 +3,7 @@ import Image from "next/image";
 import Background from "../../../public/images/manai.webp";
 import { useScroll, useTransform, motion } from "framer-motion";
 import { useRef } from "react";
-import CenterUnderline from "../scials";
-import Link from "next/link";
+
 
 export default function Section() {
   const container = useRef(null);
