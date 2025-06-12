@@ -49,8 +49,8 @@ export const generalInfo: generalInfoProps = {
   // phone line
   phoneLabel: "Phone",
   phoneDescription: "We're available Mon-Fri, 9am-5pm.",
-  phone: "+233 50 647 0919",
-  phoneLink: "+233506470919",
+  phone: "+233 54 989 6135",
+  phoneLink: "+233549896135",
   phoneTwo: "+233 50 647 0919",
   phoneTwoLink: "+233506470919", 
 }
