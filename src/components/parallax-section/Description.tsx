@@ -77,17 +77,17 @@ export default function Description() {
               {/* ...panel content... */}
               {/* number and title with opacity */}
               <div className="">
-                <h3 className="p-2 rounded-full text-black text-2xl md:text-8xl font-extrabold opacity-10 mx-8">
+                <h1 className="p-2 rounded-full text-black text-2xl md:text-7xl font-bold opacity-10 mx-8">
                   0{process.number}.
-                </h3>
+                </h1>
 
-                <div className="text-gray-800 text-2xl md:text-6xl font-bold ml-16 md:ml-32 opacity-10">
+                <h2 className="text-gray-800 text-2xl md:text-6xl font-bold ml-16 md:ml-32 opacity-10">
                   {process.title}
-                </div>
+                </h2>
               </div>
 
               {/* media div */}
-              {/* change md:width  */}
+              {/* TODO: change md:width */}
               <div className="w-full flex justify-center">
                 <div className="w-[80%] md:w-[720px] aspect-video h-full">
                   <video
@@ -100,14 +100,14 @@ export default function Description() {
                 </div>
               </div>
 
-              <div className="flex flex-col md:flex-row px-4 mt-8 md:gap-x-12 w-full">
-                <div className="text-gray-800 text-xl font-bold md:ml-32 ">
+              <div className="flex flex-col md:flex-row px-4 md:px-12 mt-8 md:gap-x-10 w-full">
+                <h4 className="text-gray-800 text-xl font-bold md:ml-32 flex-start">
                   0{process.number}. {' '} {process.title}
-                </div>
+                </h4>
 
-                <div className="w-full text-gray-700 text-sm md:text-base md:w-2xl flex items-center justify-center px-1 md:px-0.5">
+                <p className="w-full text-gray-700 text-sm md:text-base flex items-center justify-center px-1 md:px-0.5">
                   {process.description}
-                </div>
+                </p>
               </div>
             </article>
           ))}

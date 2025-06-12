@@ -17,11 +17,11 @@ export default function Paragraph({ paragraph }: ParagraphProps) {
   return (
     <p
       ref={container}
-      className="flex flex-wrap justify-center text-center text-white 
+      className="flex flex-wrap text-justify text-white 
         text-base leading-relaxed 
         sm:text-lg sm:leading-relaxed 
-        md:text-2xl md:leading-relaxed 
-        lg:text-4xl lg:leading-relaxed 
+        md:text-xl md:leading-relaxed 
+        lg:text-3xl lg:leading-relaxed 
         px-3 sm:px-4 md:p-10 
         md:max-w-[1280px] md:mx-auto 
         overflow-hidden"
@@ -47,7 +47,7 @@ const Word: React.FC<{
   const amount = range[1] - range[0];
   const step = amount / children.length;
   return (
-    <span className="relative mr-3 mt-3">
+    <span className="relative mr-3 mt-3 overflow-hidden">
       {children.split("").map((char, i) => {
         const start = range[0] + i * step;
         const end = range[0] + (i + 1) * step;
