@@ -5,7 +5,7 @@ import { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import Link from 'next/link';
 import { navLinks } from '@/constants/nav-links';
-import { generalInfo } from '@/constants/info';
+import { generalInfo, socials } from '@/constants/info';
 import { Menu, X } from 'lucide-react';
 
 export default function Navbar() {
@@ -138,8 +138,16 @@ export default function Navbar() {
               </div>
 
               {/* socials */}
-              <div className="">
-
+              <div className="flex items-center justify-center gap-x-4 pb-4 px-6">
+                  {socials.map((social) => (
+                    <Link 
+                      key={social.name} 
+                      href={social.link}
+                      className="border w-full text-center border-gray-600 py-1 capitalize px-4 rounded-md"
+                    >
+                      <p className="">{social.name}</p>
+                    </Link>
+                  ))}
               </div>
             </motion.div>
           )}

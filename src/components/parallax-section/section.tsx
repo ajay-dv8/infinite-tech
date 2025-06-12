@@ -3,6 +3,8 @@ import Image from "next/image";
 import Background from "../../../public/images/manai.webp";
 import { useScroll, useTransform, motion } from "framer-motion";
 import { useRef } from "react";
+import CenterUnderline from "../scials";
+import Link from "next/link";
 
 export default function Section() {
   const container = useRef(null);
@@ -19,16 +21,18 @@ export default function Section() {
       style={{ clipPath: "polygon(0% 0, 100% 0%, 100% 100%, 0 100%)" }}
     >
       <div className="relative z-10 p-20 mix-blend-difference text-white w-full h-full flex flex-col justify-between">
+        {/* Social Media Links */}
         <div className="">
+
 
         </div>
 
         <div className="">
-          <p className="w-[50vw] text-[2vw] self-end uppercase mix-blend-difference">
+          <p className="w-[50vw] text-xl self-end uppercase mix-blend-difference">
             Blending human insight with cutting-edge technology to craft solutions that empower your business and deliver real, lasting results.
           </p>
 
-          <p className="w-full text-2xl uppercase mix-blend-difference">
+          <p className="w-full text-5xl mt-8 text-gray-500 uppercase mix-blend-difference">
             Infinit tech solutions
           </p>
         </div>

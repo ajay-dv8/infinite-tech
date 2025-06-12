@@ -25,9 +25,9 @@ export default function Services() {
                 {service.icon}
               </div>
 
-              <div className="flex flex-col gap-y-4 text-center md:text-left">
-                <h3 className="text-xl md:text-3xl font-semibold">{service.title}</h3>
-                <p className="text-sm md:text-base">{service.description}</p>
+              <div className="flex flex-col gap-y-4 text-center md:text-left mb-8 md:mb-0">
+                <h3 className="text-lg md:text-3xl font-semibold">{service.title}</h3>
+                <p className="text-sm md:text-base text-gray-400">{service.description}</p>
               </div>
             </div>
           ))}

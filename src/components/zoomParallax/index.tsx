@@ -1,9 +1,9 @@
 import "./styles.css";
 import Picture1 from "../../../public/images/1.webp";
-import Picture2 from "../../../public/images/2.jpg";
+import Picture2 from "../../../public/images/2.webp";
 import Picture3 from "../../../public/images/3.jpg";
 import Picture4 from "../../../public/images/4.jpg";
-import Picture5 from "../../../public/images/5.jpg";
+import Picture5 from "../../../public/images/5.webp";
 import Picture6 from "../../../public/images/6.jpg";  
 import Picture7 from "../../../public/images/7.jpg";
 import Image, { StaticImageData } from "next/image";
@@ -75,10 +75,6 @@ export default function Index() {
                       muted
                       className="w-full h-full object-fill bg-[#eff1f5]"
                     />
-                    {/* <div className="absolute bottom-4 right-4 bg-opacity-50 text-gray-800">
-                      We bring your ideas to life with cutting-edge technology and
-                      innovative solutions.
-                    </div> */}
                   </div>
                 ) : (
                   <Image 
@@ -86,7 +82,11 @@ export default function Index() {
                     fill 
                     alt="image" 
                     placeholder="blur" 
-                    className="hidden md:block"
+                    className={
+                      index === 1 || index === 4 
+                        ? "block" // Always show Picture2 (index 1) and Picture5 (index 4)
+                        : "hidden md:block" // Hide others on mobile
+                    }
                   />
                 )}
               </div>

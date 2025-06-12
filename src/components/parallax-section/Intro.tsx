@@ -1,7 +1,7 @@
 'use client'
 import React from 'react'
 import Image from 'next/image';
-import Background from '../../../public/images/2.jpg';
+import Background from '../../../public/images/2.webp';
 import { useScroll, useTransform, motion } from 'framer-motion';
 import { useRef } from 'react';
 

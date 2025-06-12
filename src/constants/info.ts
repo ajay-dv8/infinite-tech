@@ -34,8 +34,8 @@ interface generalInfoProps {
 
 export const generalInfo: generalInfoProps = {
   shortName:"ITS",
-  name: "Infinite",
-  fullName: "Infinite Tech Solutions",
+  name: "Infinit",
+  fullName: "Infinit Tech Solutions",
 
   // email
   emailLabel: "Email",
