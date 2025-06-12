@@ -139,16 +139,15 @@ export default function Navbar() {
 
               {/* socials */}
               <div className="">
-                
+
               </div>
             </motion.div>
           )}
           {/* copyright */}
           {isOpen && (
-            <div className="text-center text-gray-400 text-sm">
-            &copy; {new Date().getFullYear()} {generalInfo.fullName}. All rights
-            reserved.
-          </div>
+            <p className="text-center text-gray-400 text-sm">
+            &copy; {new Date().getFullYear()} {generalInfo.fullName}. All rights reserved.
+          </p>
           )}
         </AnimatePresence>
       </div>

@@ -7,7 +7,7 @@ export default function Services() {
   return (
     <div className="flex flex-col md:flex-row md:justify-between px-4 md:px-20 mb-0 md:mb-20">
       {/* Sticky Title Column */}
-      <div className="md:sticky md:top-28 self-start">
+      <div className="md:sticky md:top-0 self-start">
         <FullTitle
           title="Services"
           topSub="What we do"
@@ -26,8 +26,8 @@ export default function Services() {
               </div>
 
               <div className="flex flex-col gap-y-4 text-center md:text-left">
-                <div className="text-xl md:text-4xl font-semibold">{service.title}</div>
-                <div className="text-sm md:text-base">{service.description}</div>
+                <h3 className="text-xl md:text-3xl font-semibold">{service.title}</h3>
+                <p className="text-sm md:text-base">{service.description}</p>
               </div>
             </div>
           ))}

@@ -61,7 +61,7 @@ export function TechStack() {
           type="image"
           items={stack}
           direction="left"
-          speed="slow"
+          speed="fast"
         />
       </div>
 
@@ -70,7 +70,7 @@ export function TechStack() {
           type="image"
           items={stackTwo}
           direction="right"
-          speed="slow"
+          speed="fast"
         />
       </div>
     </div>
@@ -123,6 +123,7 @@ const stack: MaqueeImageCardsProps[] = [
     image: "/svg/postgre.svg",
   },
 ];
+
 const stackTwo: MaqueeImageCardsProps[] = [
   {
     name: "vsCode",

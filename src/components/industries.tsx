@@ -10,18 +10,16 @@ export function Industries() {
     <div className="flex flex-col gap-y-8 md:gap-y-10 py-20">
       <FullTitle
         title="Industries"
-        topSub="Industries we caca serve"
+        topSub="Industries we serve"
         description="We have experience in a wide range of industries, including but not
-          limited to:"
+          limited to"
         className="px-4 md:px-20 my-3 md:my-10"
         titleClassName="text-[#eff1f5]"
-      />
-      {/* <div className="flex flex-col gap-y-10"> */}
+      /> 
         
       <div className="rounded-md flex flex-col antialiased items-center justify-center relative overflow-hidden">
         <InfiniteMovingCards direction="right" speed="fast" items={industries}/>
-      </div>
-    {/* </div> */}
+      </div> 
   </div>
   );
 }

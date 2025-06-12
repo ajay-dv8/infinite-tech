@@ -74,47 +74,47 @@ export const services: infiniteScrollTypes[] = [
 export const industries: infiniteScrollTypes[] = [
   {
     title: "Healthcare",
-    icon: <StethoscopeIcon size={70}/>,
+    icon: <StethoscopeIcon size={40}/>,
     description: "We build fast, scalable, and responsive web applicationWe design custom healthcare software that enhances patient care and optimizes healthcare workflows. From EHR systems to telemedicine platforms, we help providers improve efficiency and stay compliant, all while supporting better patient outcomes."
   },
   {
     title: "Hospitality",
-    icon: <StethoscopeIcon size={70}/>,
+    icon: <StethoscopeIcon size={40}/>,
     description: "We build fast, scalable, and responsive web applicationWe design custom healthcare software that enhances patient care and optimizes healthcare workflows. From EHR systems to telemedicine platforms, we help providers improve efficiency and stay compliant, all while supporting better patient outcomes."
   },
   {
     title: "Fintech",
-    icon: <LayersIcon size={70}/>,
+    icon: <LayersIcon size={40}/>,
     description: "We develop secure, scalable fintech solutions for digital banking, payments, and financial services. Our platforms help businesses navigate complex regulatory landscapes and deliver seamless, reliable user experiences in an ever-evolving market.",
   },
   {
     title: "eCommerce",
-    icon: <HandCoinsIcon size={70}/>,
+    icon: <HandCoinsIcon size={40}/>,
     description: "We create retail and wholesale solutions that connect online and in-store experiences. From inventory management to e-commerce platforms, our software helps businesses increase sales, streamline operations, and foster customer loyalty.",
   },
   {
     title: "Manufacturing",
-    icon: <WorkflowIcon size={70}/>,
+    icon: <WorkflowIcon size={40}/>,
     description: "Our manufacturing software streamlines operations by automating production and optimizing supply chains. We deliver real-time insights that help businesses make data-driven decisions, improve efficiency, and reduce operational costs. ",
   },
   {
     title: "Real Estate",
-    icon: <HomeIcon size={70}/>,
+    icon: <HomeIcon size={40}/>,
     description: "We deliver real estate software that simplifies property management and lead generation. Our solutions help real estate businesses manage portfolios, communicate with clients, and grow their operations with ease.",
   },
   {
     title: "Logistics",
-    icon: <ChartLineIcon size={70}/>,
+    icon: <ChartLineIcon size={40}/>,
     description: "We develop logistics software that enhances route optimization, fleet management, and shipment tracking. Our solutions help businesses reduce costs, improve delivery accuracy, and scale operations with greater control and efficiency.",
   },
   {
     title: "others",
-    icon: <GripIcon size={70}/>,
+    icon: <GripIcon size={40}/>,
     description: "",
   },
   {
     title: "custom Brands",
-    icon: <LayersIcon size={20}/>,
+    icon: <LayersIcon size={50}/>,
     description: "We build fast, scalable, and responsive web applications.",
   },
 ]
