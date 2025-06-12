@@ -4,10 +4,9 @@ import { Contact } from "@/components/contact";
 import { Footer } from "@/components/footer";
 import { HeroBg } from "@/components/hero";
 import { Industries } from "@/components/industries"; 
-// import Line from "@/components/line";
 import Description from "@/components/parallax-section/Description";
 import Intro from "@/components/parallax-section/Intro";
-import Section from "@/components/parallax-section/section";
+import Section from "@/components/parallax-section/section"; 
 import Services from "@/components/services";
 import { TechStack } from "@/components/tech-stack";
 import { Testimonials } from "@/components/testimonials";
@@ -49,7 +48,7 @@ export default function Home() {
           <Section />
         </div> 
         <WorksCompleted />
-        <Testimonials />
+        <Testimonials /> 
         <Contact />
         {/* <Footer/> */}
         <div className='relative h-[500px] md:h-[500px] bottom-0 '

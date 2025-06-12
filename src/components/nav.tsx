@@ -105,7 +105,7 @@ export default function Navbar() {
               animate={{ opacity: 1, height: "auto" }}
               exit={{ opacity: 0, height: 0 }}
               transition={{ duration: 0.3 }}
-              className="md:hidden overflow-hidden bg-black/60 backdrop-blur-lg mt-2 rounded-2xl"
+              className="md:hidden overflow-hidden bg-black/40 backdrop-blur-lg mt-2 rounded-lg"
             >
               <div className="px-4 py-6 space-y-4">
                 {navLinks.map((link, index) => (
@@ -127,7 +127,7 @@ export default function Navbar() {
                 <motion.button
                   initial={{ opacity: 0 }}
                   animate={{ opacity: 1 }}
-                  className="w-full px-4 py-3 bg-white text-black rounded-full text-base font-medium hover:bg-opacity-90 transition-colors"
+                  className="w-full px-4 py-2 bg-white text-black rounded-lg text-base font-medium hover:bg-opacity-90 transition-colors"
                   onClick={() => {
                     window.location.href = '#contact';
                     setIsOpen(false);
@@ -136,7 +136,19 @@ export default function Navbar() {
                   Contact
                 </motion.button>
               </div>
+
+              {/* socials */}
+              <div className="">
+                
+              </div>
             </motion.div>
+          )}
+          {/* copyright */}
+          {isOpen && (
+            <div className="text-center text-gray-400 text-sm">
+            &copy; {new Date().getFullYear()} {generalInfo.fullName}. All rights
+            reserved.
+          </div>
           )}
         </AnimatePresence>
       </div>

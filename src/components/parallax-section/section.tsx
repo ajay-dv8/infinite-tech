@@ -19,14 +19,19 @@ export default function Section() {
       style={{ clipPath: "polygon(0% 0, 100% 0%, 100% 100%, 0 100%)" }}
     >
       <div className="relative z-10 p-20 mix-blend-difference text-white w-full h-full flex flex-col justify-between">
+        <div className="">
 
-        <p className="w-[50vw] text-[2vw] self-end uppercase mix-blend-difference">
-          Blending human insight with cutting-edge technology to craft solutions that empower your business and deliver real, lasting results.
-        </p>
+        </div>
 
-        <p className="w-full text-2xl uppercase mix-blend-difference">
-          Infinit tech solutions
-        </p>
+        <div className="">
+          <p className="w-[50vw] text-[2vw] self-end uppercase mix-blend-difference">
+            Blending human insight with cutting-edge technology to craft solutions that empower your business and deliver real, lasting results.
+          </p>
+
+          <p className="w-full text-2xl uppercase mix-blend-difference">
+            Infinit tech solutions
+          </p>
+        </div>
       </div>
 
       <div className="fixed top-[-10vh] left-0 h-[120vh] w-full">

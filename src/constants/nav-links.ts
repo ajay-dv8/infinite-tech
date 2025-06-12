@@ -24,8 +24,8 @@ export const navLinks = [
     title: "Testimonials",
     href: "#testimonials",
   },
-  {
-    title: "Contact",
-    href: "contact", 
-  },
+  // {
+  //   title: "Contact",
+  //   href: "contact", 
+  // },
 ]

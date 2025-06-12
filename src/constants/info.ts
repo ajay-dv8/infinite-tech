@@ -14,17 +14,29 @@ interface generalInfoProps {
   phoneLabel?: string
   phoneDescription?: string
   phone?: string
+  phoneTwo?: string
 
+  phoneTwoLink?: string
   emailLink?: string
   phoneLink?: string
 
-  // tiktok: ;
+  socials?: {
+    tiktok?: string
+    instagram?: string
+    facebook?: string
+    // X ?: string
+    linkedin?: string
+    youtube?: string
+    github?: string
+    X?: string
+  }
 }
 
 export const generalInfo: generalInfoProps = {
   shortName:"ITS",
   name: "Infinite",
   fullName: "Infinite Tech Solutions",
+
   // email
   emailLabel: "Email",
   emailDescription: "We respond to all emails within 24 hours.",
@@ -38,5 +50,19 @@ export const generalInfo: generalInfoProps = {
   phoneLabel: "Phone",
   phoneDescription: "We're available Mon-Fri, 9am-5pm.",
   phone: "+233 50 647 0919",
-  phoneLink: "+233506470919"
+  phoneLink: "+233506470919",
+  phoneTwo: "+233 50 647 0919",
+  phoneTwoLink: "+233506470919", 
 }
+
+
+export const socials = [
+  {
+    name: "X (Twitter)",
+    link: "https://x.com/infinit_tech_gh?t=2l1gejSLKSX4xkBtLNqnBw&s=09",
+  }, 
+  {
+    name: "linkedin",
+    link: "https://www.linkedin.com/company/infinit-tech-solutions",
+  },
+]
