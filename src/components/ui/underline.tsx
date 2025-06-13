@@ -4,7 +4,7 @@ import { useEffect, useRef } from "react"
 import { motion, ValueAnimationTransition } from "motion/react"
 
 interface UnderlineProps {
-  label: string
+  label?: string
   className?: string
   transition?: ValueAnimationTransition
   // onClick?: () => void
@@ -65,7 +65,7 @@ const CenterUnderline = ({
       ref={textRef}
       {...props}
     >
-      <p>{label}</p>
+      <span>{label}</span>
       <motion.div
         className="absolute left-1/2 bg-current -translate-x-1/2"
         style={{

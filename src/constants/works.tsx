@@ -2,11 +2,11 @@
 
 export const completedProjects = [
   {
-    title: "Project completed",
+    title: "Projects completed",
     quantity: 50,
   },
   {
-    title: "Collaboration",
+    title: "Collaborations",
     quantity: 35,
   },
   {
@@ -14,7 +14,7 @@ export const completedProjects = [
     quantity: 10,
   },
   {
-    title: "Happy Client",
+    title: "Happy Clients",
     quantity: 100,
   },
 ]

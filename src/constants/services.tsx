@@ -1,4 +1,3 @@
-
 import { MonitorCheckIcon } from "../../public/icons/monitor";
 import { CartIcon } from "../../public/icons/cart";
 import { PenToolIcon } from "../../public/icons/pen";
@@ -22,50 +21,80 @@ export const services: infiniteScrollTypes[] = [
   {
     title: "Web Development",
     icon: <MonitorCheckIcon size={70}/>,
-    description: "We build fast, scalable, and responsive web applications.",
+    description: "Custom web solutions built with cutting-edge technologies for optimal performance and scalability.",
   },
   
   {
     title: "eCommerce Solutions",
     icon: <CartIcon size={70}/>,
-    description: "We build fast, scalable, and responsive web applications.",
+    description: "Powerful online stores with seamless checkout experiences and robust inventory management.",
   },
 
   {
     title: "UI/UX Design",
     icon: <PenToolIcon size={70}/>,
-    description: "We build fast, scalable, and responsive web applications.",
+    description: "User-centered designs that combine aesthetics with intuitive functionality for maximum engagement.",
   },
 
   {
     title: "Website Redesign",
     icon: <SparklesIcon size={70}/>,
-    description: "We build fast, scalable, and responsive web applications.",
+    description: "Transform your existing website with modern design principles and enhanced user experience.",
   },
 
   {
     title: "Mobile Apps",
     icon: <VibrateIcon size={70}/>,
-    description: "We build fast, scalable, and responsive web applications.",
+    description: "Native and cross-platform mobile applications that deliver exceptional user experiences.",
+  },
+
+  // {
+  //   title: "SaaS Development",
+  //   icon: <LayersIcon size={70}/>,
+  //   description: "Cloud-based software solutions that scale with your business needs and customer demands.",
+  // },
+
+  {
+    title: "ERP Solutions",
+    icon: <ChartPieIcon size={70}/>,
+    description: "Turn your data into actionable insights with advanced analytics and visualization tools.",
+  },
+
+  // {
+  //   title: "API Integration",
+  //   icon: <GripIcon size={70}/>,
+  //   description: "Seamless integration services to connect your systems and streamline business processes.",
+  // },
+
+  // {
+  //   title: "Healthcare Solutions",
+  //   icon: <StethoscopeIcon size={70}/>,
+  //   description: "Specialized software solutions for healthcare providers, ensuring compliance and efficiency.",
+  // },
+
+  {
+    title: "Fintech Solutions",
+    icon: <HandCoinsIcon size={70}/>,
+    description: "Secure and innovative financial technology solutions for modern banking and payments.",
   },
 
   {
-    title: "Custom Software Solutions",
-    icon: <GripIcon size={70}/>,
-    description: "We build fast, scalable, and responsive web applications.",
+    title: "Business Intelligence",
+    icon: <ChartLineIcon size={70}/>,
+    description: "Data-driven insights and reporting tools to optimize your business decisions.",
   },
-  
-  {
-    title: "Enterprise Software Solutions",
-    icon: <ChartPieIcon size={70}/>,
-    description: "We build fast, scalable, and responsive web applications.",
-  },
-  
-  {
-    title: "Graphic Design",
-    icon: <LayersIcon size={70}/>,
-    description: "We build fast, scalable, and responsive web applications.",
-  },
+
+  // {
+  //   title: "Real Estate Tech",
+  //   icon: <HomeIcon size={70}/>,
+  //   description: "Digital solutions for property management, listings, and real estate operations.",
+  // },
+
+  // {
+  //   title: "Workflow Automation",
+  //   icon: <WorkflowIcon size={70}/>,
+  //   description: "Automate repetitive tasks and optimize business processes for increased productivity.",
+  // },
 ]
 
 

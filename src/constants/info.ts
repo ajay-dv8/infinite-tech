@@ -1,16 +1,17 @@
-// TODO: CHANGE DATA TO FIT SITE
-
 
 interface generalInfoProps {
   name?: string
   fullName?: string
   shortName?: string
+
   emailLabel?: string
   emailDescription?: string
   email?: string
+
   officeLabel?: string
   officeDescription?: string
   officeAddress?: string
+
   phoneLabel?: string
   phoneDescription?: string
   phone?: string
@@ -23,8 +24,7 @@ interface generalInfoProps {
   socials?: {
     tiktok?: string
     instagram?: string
-    facebook?: string
-    // X ?: string
+    facebook?: string 
     linkedin?: string
     youtube?: string
     github?: string

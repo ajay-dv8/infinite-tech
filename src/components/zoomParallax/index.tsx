@@ -9,6 +9,7 @@ import Picture7 from "../../../public/images/7.jpg";
 import Image, { StaticImageData } from "next/image";
 import { useScroll, useTransform, motion, MotionValue } from "framer-motion";
 import { useRef } from "react"; 
+import { Jvideo } from "../ajVideo";
 
 interface PictureProps {
   src: string | StaticImageData; // Updated to allow string for video src
@@ -68,12 +69,10 @@ export default function Index() {
               <div className={'imageContainer'}>
                 {index === 0 ? (
                   <div className="relative w-full h-full">
-                    <video
-                      src="/videos/inf.mp4"
-                      autoPlay
-                      loop
-                      muted
-                      className="w-full h-full object-fill bg-[#eff1f5]"
+                    <Jvideo
+                      src="/videos/inf.mp4" 
+                      className="w-full h-full object-fill rounded-none bg-[#eff1f5]"
+                      containerClassName="w-full h-full rounded-none"
                     />
                   </div>
                 ) : (

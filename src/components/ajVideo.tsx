@@ -1,5 +1,4 @@
 "use client";
-
 import { cn } from "@/lib/utils";
 import React, { useRef, useState, useEffect } from "react";
 
@@ -54,7 +53,7 @@ export const Jvideo = ({
 
   return (
     // Container with 16:9 aspect ratio using padding-bottom trick
-    <div className={cn("relative w-full pb-[56.25%] bg-gray-800 rounded-xl", containerClassName)}>
+    <div className={cn("relative w-full pb-[56.25%] bg-transparent rounded-xl", containerClassName)}>
       <video
         ref={videoRef}
         poster={poster}
@@ -63,7 +62,7 @@ export const Jvideo = ({
         muted
         playsInline
         preload="none"
-        className={cn("absolute top-0 left-0 w-full h-full rounded-lg object-cover",className)}
+        className={cn("absolute top-0 left-0 w-full h-full rounded-lg object-cover", className)}
       >
         {/* add video source when in view */}
         {isInView && <source src={src} type="video/webm" />}
