@@ -3,6 +3,7 @@ import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { processSteps } from "@/constants/process";
 import { FullTitle } from "../section-title";
+import { Jvideo } from "../ajVideo";
 
 export default function Description() {
   const panelsContainerRef = useRef<HTMLDivElement>(null);
@@ -90,12 +91,11 @@ export default function Description() {
               {/* TODO: change md:width */}
               <div className="w-full flex justify-center">
                 <div className="w-[80%] md:w-[720px] aspect-video h-full">
-                  <video
+                  <Jvideo
+                    width={720}
+                    poster={process.poster} 
                     src={process.video}
-                    autoPlay
-                    loop
-                    muted
-                    className="w-full h-full object-fill rounded-lg"
+                    className="aspect-video "
                   />
                 </div>
               </div>
