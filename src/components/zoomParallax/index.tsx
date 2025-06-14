@@ -1,11 +1,11 @@
 import "./styles.css";
-import Picture1 from "../../../public/images/1.webp";
-import Picture2 from "../../../public/images/2.webp";
-import Picture3 from "../../../public/images/3.jpg";
-import Picture4 from "../../../public/images/4.jpg";
-import Picture5 from "../../../public/images/5.webp";
-import Picture6 from "../../../public/images/6.jpg";  
-import Picture7 from "../../../public/images/7.jpg";
+// import Picture1 from "../../../public/images/1.webp";
+import Picture2 from "../../../public/images/p3.webp";
+import Picture3 from "../../../public/images/5.webp";
+import Picture4 from "../../../public/images/p4.webp";
+import Picture5 from "../../../public/images/p2.webp";
+import Picture6 from "../../../public/images/p1.webp";  
+import Picture7 from "../../../public/images/2.webp";
 import Image, { StaticImageData } from "next/image";
 import { useScroll, useTransform, motion, MotionValue } from "framer-motion";
 import { useRef } from "react"; 
@@ -23,17 +23,17 @@ export default function Index() {
     offset: ["start start", "end end"],
   });
 
-  const scale4 = useTransform(scrollYProgress, [0, 1], [1, 4]);
+  // const scale4 = useTransform(scrollYProgress, [0, 1], [1, 4]);
   const scale5 = useTransform(scrollYProgress, [0, 1], [1, 5]);
   const scale6 = useTransform(scrollYProgress, [0, 1], [1, 6]);
   const scale8 = useTransform(scrollYProgress, [0, 1], [1, 8]);
   const scale9 = useTransform(scrollYProgress, [0, 1], [1, 9]);
 
   const pictures: PictureProps[] = [
-    {
-      src: Picture1,
-      scale: scale4,
-    },
+    // {
+    //   src: Picture1,
+    //   scale: scale4,
+    // },
     {
       src: Picture2,
       scale: scale5,
@@ -71,6 +71,7 @@ export default function Index() {
                   <div className="relative w-full h-full">
                     <Jvideo
                       src="/videos/inf.mp4" 
+                      poster="/posters/inf.webp"
                       className="w-full h-full object-fill rounded-none bg-[#eff1f5]"
                       containerClassName="w-full h-full rounded-none"
                     />
