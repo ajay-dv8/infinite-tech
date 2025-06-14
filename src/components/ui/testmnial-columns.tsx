@@ -1,11 +1,11 @@
 "use client";
 import React from "react";
 import { motion } from "motion/react";
-import Image from "next/image";
+import Image, { StaticImageData } from "next/image";
 
 interface Testimonial {
   text: string;
-  image: string;
+  image?: string | StaticImageData | undefined;
   name: string;
   role: string;
 }
@@ -39,7 +39,7 @@ export const TestimonialsColumn = (props: {
                     <Image
                       width={40}
                       height={40}
-                      src={image}
+                      src={image ?? ''}
                       alt={name}
                       className="h-10 w-10 rounded-full"
                     />

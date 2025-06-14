@@ -1,4 +1,3 @@
-
 "use client";
 
 import { useState, useEffect } from 'react';
@@ -8,12 +7,35 @@ import { navLinks } from '@/constants/nav-links';
 import { generalInfo, socials } from '@/constants/info';
 import { Menu, X } from 'lucide-react';
 import CenterUnderline from './ui/underline';
+import Lenis from 'lenis';
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
 
-  // Handle scroll effect
+  // Initialize Lenis for smooth scrolling
+  useEffect(() => {
+    const lenis = new Lenis({
+      duration: 1.2,
+      easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
+      orientation: 'vertical',
+      gestureOrientation: 'vertical',
+      smoothWheel: true,
+    });
+
+    function raf(time: number) {
+      lenis.raf(time);
+      requestAnimationFrame(raf);
+    }
+
+    requestAnimationFrame(raf);
+
+    return () => {
+      lenis.destroy();
+    };
+  }, []);
+
+  // Handle scroll effect for navbar background
   useEffect(() => {
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 20);
@@ -22,9 +44,19 @@ export default function Navbar() {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
+  // Handle smooth scroll to section
+  const handleNavClick = (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
+    e.preventDefault();
+    const targetElement = document.querySelector(href);
+    if (targetElement) {
+      targetElement.scrollIntoView({ behavior: 'smooth' });
+      setIsOpen(false); // Close mobile menu after clicking
+    }
+  };
+
   return (
     <nav 
-      className={`fixed top-0 w-full z-50 transition-all duration-500 ${
+      className={`fixed top-0 w-svw z-50 transition-all duration-500 ${
         isScrolled ? 'py-2 bg-black/60 backdrop-blur-md' : 'py-4 bg-transparent'
       }`}
     >
@@ -40,6 +72,7 @@ export default function Navbar() {
             <Link 
               href="/" 
               className="text-xl sm:text-2xl font-bold bg-gradient-to-r from-white to-gray-300 bg-clip-text text-transparent hover:from-white hover:to-gray-400 transition-all duration-300"
+              onClick={(e) => handleNavClick(e, '#hero')}
             >
               {generalInfo.name}
             </Link>
@@ -56,7 +89,8 @@ export default function Navbar() {
               >
                 <Link
                   href={link.href}
-                  className="relative px-3 py-2 text-white/90 hover:text-white text-sm lg:text-base  tracking-wider group transition-colors duration-300"
+                  className="relative px-3 py-2 text-white/90 hover:text-white text-sm lg:text-base tracking-wider group transition-colors duration-300"
+                  onClick={(e) => handleNavClick(e, link.href)}
                 >
                   <CenterUnderline label={link.title} className="relative z-10" />
                   <motion.span
@@ -74,7 +108,7 @@ export default function Navbar() {
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
               className="px-4 py-2 bg-white text-black rounded-full text-sm font-medium hover:bg-opacity-90 transition-all duration-300"
-              onClick={() => window.location.href = '#contact'}
+              // onClick={(e) => handleNavClick(e as any, '#contact')}
             >
               Contact
             </motion.button>
@@ -119,7 +153,7 @@ export default function Navbar() {
                     <Link
                       href={link.href}
                       className="block px-3 py-2 text-white/90 hover:text-white text-lg font-medium uppercase tracking-wide transition-colors"
-                      onClick={() => setIsOpen(false)}
+                      onClick={(e) => handleNavClick(e, link.href)}
                     >
                       {link.title}
                     </Link>
@@ -129,10 +163,7 @@ export default function Navbar() {
                   initial={{ opacity: 0 }}
                   animate={{ opacity: 1 }}
                   className="w-full px-4 py-2 bg-white text-black rounded-lg text-base font-medium hover:bg-opacity-90 transition-colors"
-                  onClick={() => {
-                    window.location.href = '#contact';
-                    setIsOpen(false);
-                  }}
+                  // onClick={(e) => handleNavClick(e as any, '#contact')}
                 >
                   Contact
                 </motion.button>
@@ -140,23 +171,23 @@ export default function Navbar() {
 
               {/* socials */}
               <div className="flex items-center justify-center gap-x-4 pb-4 px-6">
-                  {socials.map((social) => (
-                    <Link 
-                      key={social.name} 
-                      href={social.link}
-                      className="border w-full text-center border-gray-600 py-1 capitalize px-4 rounded-md"
-                    >
-                      <p className="">{social.name}</p>
-                    </Link>
-                  ))}
+                {socials.map((social) => (
+                  <Link 
+                    key={social.name} 
+                    href={social.link}
+                    className="border w-full text-center border-gray-600 py-1 capitalize px-4 rounded-md"
+                  >
+                    <p className="">{social.name}</p>
+                  </Link>
+                ))}
               </div>
             </motion.div>
           )}
           {/* copyright */}
           {isOpen && (
             <p className="text-center text-gray-400 text-sm">
-            &copy; {new Date().getFullYear()} {generalInfo.fullName}. All rights reserved.
-          </p>
+              &copy; {new Date().getFullYear()} {generalInfo.fullName}. All rights reserved.
+            </p>
           )}
         </AnimatePresence>
       </div>

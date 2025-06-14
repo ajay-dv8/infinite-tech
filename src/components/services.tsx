@@ -49,6 +49,8 @@ const ServiceCard = ({ service, index }: { service: ServiceType; index: number }
   );
 };
 
+
+
 export default function Services() {
   return (
     <div className="flex flex-col md:flex-row md:justify-between px-4 md:px-20 mb-0 md:mb-20">

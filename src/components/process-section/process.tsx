@@ -36,7 +36,7 @@ export default function Description() {
   }, []);
 
   return (
-    <div id="page" className="site h-full overflow-x-hidden">
+    <div id="page" className="site h-full overflow-hidden">
 
       <section id="panels">
         <div 
@@ -50,13 +50,6 @@ export default function Description() {
           ref={el => { panelsRef.current[0] = el; }}
           className="relative flex flex-col items-center justify-center w-full h-full overflow-hidden"
         >
-          {/* <h1 className="text-4xl md:text-8xl font-bold text-gray-800 mb-4 md:mb-6">
-            Our Process 
-          </h1>
-          <p className="text-lg md:text-2xl text-gray-600 max-w-3xl text-center px-3">
-            We follow a systematic approach to turn your ideas into reality. 
-            Scroll down to explore our step-by-step process.
-          </p> */}
           <FullTitle
             title="Our Process"
             description="We follow a systematic approach to turn your ideas into reality. Scroll down to explore our step-by-step process."
@@ -65,7 +58,6 @@ export default function Description() {
           />
         </article>
 
-        
 
           {/* Process Steps Panels */}
           {processSteps.map((process, idx) => (
@@ -87,15 +79,15 @@ export default function Description() {
                 </h2>
               </div>
 
-              {/* media div */}
+              {/* video div */}
               {/* TODO: change md:width */}
               <div className="w-full flex justify-center">
-                <div className="w-[80%] md:w-[720px] aspect-video h-full">
+                <div className="w-[90%] md:w-[720px] aspect-square md:aspect-video h-full">
                   <Jvideo
                     width={720}
                     poster={process.poster} 
                     src={process.video}
-                    className="aspect-video "
+                    className="aspect-square md:aspect-video "
                   />
                 </div>
               </div>

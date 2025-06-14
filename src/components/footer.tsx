@@ -42,7 +42,7 @@ export const Footer = () => {
       <FullwidthText
         text={companyName}
         color="text-slate-800"
-        className="relative bottom-0 left-0 w-full h-full"
+        className="relative bottom-0 left-0 w-full h-full mt-40 md:mt-1"
       />
     </div>
   );

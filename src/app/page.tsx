@@ -35,13 +35,10 @@ export default function Home() {
       <ReactLenis root>
         <HeroBg />
         <About />
-        <Industries />
-        {/* <Line /> */}
+        <Industries /> 
         <Services />
-        <TechStack/>
-        <div className={""}>
-          <ZoomParallax />
-        </div>
+        <TechStack/> 
+          <ZoomParallax /> 
         <div className="bg-[#eff1f5]">
           <Intro />
           <Description />
@@ -51,11 +48,11 @@ export default function Home() {
         <Testimonials /> 
         <Contact />
         {/* <Footer/> */}
-        <div className='relative h-[500px] md:h-[500px] bottom-0 '
+        <div className='relative h-[480px] md:h-[500px] bottom-0 '
           style={{clipPath: "polygon(0% 0, 100% 0%, 100% 100%, 0 100%)"}}
         > 
-          <div className='relative h-[calc(100vh+720px)] md:h-[calc(100vh+500px)] -top-[100vh]'> 
-            <div className='h-[500px] md:h-[500px] sticky top-[calc(100vh-720px)] md:top-[calc(100vh-500px)]'> 
+          <div className='relative h-[calc(100vh+420px)] md:h-[calc(100vh+500px)] -top-[100vh]'> 
+            <div className='h-[420px] md:h-[500px] sticky top-[calc(100vh-420px)] md:top-[calc(100vh-500px)]'> 
               <Footer />
             </div> 
           </div> 

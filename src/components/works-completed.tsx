@@ -34,12 +34,12 @@ const item = {
 
 export default function WorksCompleted() {
   return (
-    <motion.section 
+    <section 
       className='px-4 md:px-20 py-16 md:py-2 bg-[#eff1f5]'
-      initial={{ opacity: 0 }}
-      whileInView={{ opacity: 1 }}
-      viewport={{ once: true }}
-      transition={{ duration: 0.6 }}
+      // initial={{ opacity: 1 }}
+      // whileInView={{ opacity: 1 }}
+      // viewport={{ once: true }}
+      // transition={{ duration: 0.6 }}
     >
       <motion.div
         initial={{ opacity: 0, y: 30 }}
@@ -105,7 +105,7 @@ export default function WorksCompleted() {
           </motion.div>
         ))}
       </motion.div>
-    </motion.section>
+    </section>
   )
 }
 
