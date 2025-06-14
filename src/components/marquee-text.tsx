@@ -41,11 +41,6 @@ export default function MarqueeText() {
 
   return (
     <main className="relative flex h-screen mb-[100vh] overflow-hidden z-99">
-      {/* <Image 
-        src="/images/background.jpg"
-        fill={true}
-        alt="background"
-      /> */}
       <div className="absolute top-[calc(100vh-350px)]">
         <div ref={slider} className="relative whitespace-nowrap">
           <p ref={firstText} className="relative m-0 text-white text-[230px] font-medium pr-[50px]">Freelance Developer -</p>

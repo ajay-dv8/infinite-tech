@@ -46,8 +46,7 @@ export default function Home() {
         </div> 
         <WorksCompleted />
         <Testimonials /> 
-        <Contact />
-        {/* <Footer/> */}
+        <Contact /> 
         <div className='relative h-[480px] md:h-[500px] bottom-0 '
           style={{clipPath: "polygon(0% 0, 100% 0%, 100% 100%, 0 100%)"}}
         > 

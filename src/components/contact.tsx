@@ -7,12 +7,7 @@ import { motion } from "framer-motion";
 
 export const Contact = () => {
   return (
-    <section 
-      // initial={{ opacity: 0 }}
-      // whileInView={{ opacity: 1 }}
-      // viewport={{ once: true }}
-      // transition={{ duration: 0.6 }}
-      className="px-4 md:px-20 bg-[#eff1f5] text-gray-800"
+    <section className="px-4 md:px-20 bg-[#eff1f5] text-gray-800"
     >
       {/* title */}
       <motion.div 
