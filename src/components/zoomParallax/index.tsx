@@ -82,11 +82,11 @@ export default function Index() {
                     fill 
                     alt="image" 
                     placeholder="blur" 
-                    className={
-                      index === 1 || index === 4 
-                        ? "block" // Always show Picture2 (index 1) and Picture5 (index 4)
-                        : "hidden md:block" // Hide others on mobile
-                    }
+                    className={`
+                      ${index === 1 || index === 4 
+                        ? "block object-cover w-full h-full" // Always show and ensure full coverage
+                        : "hidden md:block"} // Hide others on mobile
+                    `}
                   />
                 )}
               </div>
