@@ -68,12 +68,12 @@ export default function Index() {
             <motion.div key={index} style={{ scale }} className={'el'}>
               <div className={'imageContainer'}>
                 {index === 0 ? (
-                  <div className="relative w-full h-full">
+                  <div className="w-full h-full">
                     <Jvideo
                       src="/videos/inf.mp4" 
-                      poster="/posters/inf.webp"
-                      className="w-full h-full object-fill rounded-none bg-[#eff1f5]"
-                      containerClassName="w-full h-full rounded-none"
+                      poster="/poster/inf.webp"
+                      className="object-fill rounded-none bg-[#eff1f5]"
+                      containerClassName="rounded-none"
                     />
                   </div>
                 ) : (
