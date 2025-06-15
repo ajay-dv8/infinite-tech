@@ -92,12 +92,12 @@ export default function Description() {
                 </div>
               </div>
 
-              <div className="flex flex-col md:flex-row px-4 md:px-12 mt-8 md:gap-x-10 w-full">
-                <h4 className="text-gray-800 text-xl font-bold md:ml-32 flex-start">
+              <div className="flex flex-col px-4 md:px-6 mt-4 md:gap-x-6 w-full">
+                <h4 className="text-gray-800 text-xl font-semibold md:ml-24 flex-start">
                   0{process.number}. {' '} {process.title}
                 </h4>
 
-                <p className="w-full text-gray-700 text-sm md:text-base flex items-center justify-center px-1 md:px-0.5">
+                <p className="w-full mt-2 text-gray-700 text-sm md:text-base flex items-center justify-center px-1 md:px-24">
                   {process.description}
                 </p>
               </div>

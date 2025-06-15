@@ -20,7 +20,7 @@ export const Contact = () => {
         <FullTitle
           title="Contact Us"
           description="Connect with us via email or phone"
-          className="my-0 md:my-0"
+          className="my-0 md:my-0 text-[#18181b]"
         />
       </motion.div>
 
