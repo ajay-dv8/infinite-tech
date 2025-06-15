@@ -31,7 +31,7 @@ export default function Home() {
   }, []);
   
   return (
-    <div className="">
+    <div className="w-full">
       <ReactLenis root>
         <HeroBg />
         <About />
@@ -39,11 +39,11 @@ export default function Home() {
         <Services />
         <TechStack/> 
           <ZoomParallax /> 
-        <div className="bg-[#eff1f5]">
+        {/* <div className="bg-[#eff1f5]"> */}
           <Intro />
           <Description />
           <Section />
-        </div> 
+        {/* </div>  */}
         <WorksCompleted />
         <Testimonials /> 
         <Contact /> 

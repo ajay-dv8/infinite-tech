@@ -7,7 +7,7 @@ import { industries } from "@/constants/services";
 
 export function Industries() {
   return (
-    <div className="flex flex-col gap-y-8 md:gap-y-10 py-20">
+    <div id="industries" className="flex flex-col gap-y-8 md:gap-y-10 py-20">
       <FullTitle
         title="Industries"
         topSub="Industries we serve"

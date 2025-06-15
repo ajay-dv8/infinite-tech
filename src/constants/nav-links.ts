@@ -10,22 +10,14 @@ export const navLinks = [
   // },
   {
     title: "Services",
-    href: "#service", 
+    href: "#services", 
   },
   {
     title: "case study",
     href: "#work", 
   },
-  // {
-  //   title: "Process",
-  //   href: "#process", 
-  // },
   {
     title: "Testimonials",
     href: "#testimonials",
-  },
-  // {
-  //   title: "Contact",
-  //   href: "contact", 
-  // },
+  }, 
 ]

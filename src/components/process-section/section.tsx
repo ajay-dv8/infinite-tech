@@ -1,9 +1,10 @@
-'use client'
+"use client";
 import Image from "next/image";
 import Background from "../../../public/images/manai.webp";
 import { useScroll, useTransform, motion } from "framer-motion";
 import { useRef } from "react";
-
+import { FullwidthText } from "../ui/fullwidth-text";
+import { generalInfo } from "@/constants/info";
 
 export default function Section() {
   const container = useRef(null);
@@ -16,19 +17,13 @@ export default function Section() {
   return (
     <div
       ref={container}
-      className="w-full relative flex items-center justify-center h-screen overflow-hidden"
+      className="w-full bg-[#eff1f5] relative flex items-center justify-center h-screen overflow-hidden"
       style={{ clipPath: "polygon(0% 0, 100% 0%, 100% 100%, 0 100%)" }}
     >
-      <div className="relative z-10 p-6 md:p-20 mix-blend-difference text-white w-full h-full flex flex-col justify-between">
-
-        <div className="">
-          <p className="w-full text-xl self-end uppercase mix-blend-difference">
-            Blending human insight with cutting-edge technology to craft solutions that empower your business and deliver real, lasting results.
-          </p>
-
-          <p className="w-full text-5xl mt-8 text-gray-500 uppercase mix-blend-difference">
-            Infinit tech solutions
-          </p>
+      <div className="relative z-10 mix-blend-difference text-white w-full h-full flex flex-col items-center justify-center">
+        <div className="w-full">
+          <FullwidthText text={generalInfo.name} className="opacity-10" />
+          <FullwidthText text="Tech Solutions" className="opacity-10" />
         </div>
       </div>
 

@@ -13,6 +13,15 @@ export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
 
+    // Handle scroll effect for navbar background
+  useEffect(() => {
+    const handleScroll = () => {
+      setIsScrolled(window.scrollY > 20);
+    };
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+  
   // Initialize Lenis for smooth scrolling
   useEffect(() => {
     const lenis = new Lenis({
@@ -35,24 +44,6 @@ export default function Navbar() {
     };
   }, []);
 
-  // Handle scroll effect for navbar background
-  useEffect(() => {
-    const handleScroll = () => {
-      setIsScrolled(window.scrollY > 20);
-    };
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
-
-  // Handle smooth scroll to section
-  const handleNavClick = (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
-    e.preventDefault();
-    const targetElement = document.querySelector(href);
-    if (targetElement) {
-      targetElement.scrollIntoView({ behavior: 'smooth' });
-      setIsOpen(false); // Close mobile menu after clicking
-    }
-  };
 
   return (
     <nav 
@@ -72,7 +63,7 @@ export default function Navbar() {
             <Link 
               href="/" 
               className="text-xl sm:text-2xl font-bold bg-gradient-to-r from-white to-gray-300 bg-clip-text text-transparent hover:from-white hover:to-gray-400 transition-all duration-300"
-              onClick={(e) => handleNavClick(e, '#hero')}
+              // onClick={(e) => scrollToSection('hero')}
             >
               {generalInfo.name}
             </Link>
@@ -90,7 +81,7 @@ export default function Navbar() {
                 <Link
                   href={link.href}
                   className="relative px-3 py-2 text-white/90 hover:text-white text-sm lg:text-base tracking-wider group transition-colors duration-300"
-                  onClick={(e) => handleNavClick(e, link.href)}
+                  // onClick={(e) => handleNavClick(e, link.href)}
                 >
                   <CenterUnderline label={link.title} className="relative z-10" />
                   <motion.span
@@ -153,7 +144,7 @@ export default function Navbar() {
                     <Link
                       href={link.href}
                       className="block px-3 py-2 text-white/90 hover:text-white text-lg font-medium uppercase tracking-wide transition-colors"
-                      onClick={(e) => handleNavClick(e, link.href)}
+                      // onClick={(e) => handleNavClick(e, link.href)}
                     >
                       {link.title}
                     </Link>

@@ -36,7 +36,7 @@ export default function Description() {
   }, []);
 
   return (
-    <div id="page" className="site h-full overflow-hidden">
+    <div id="page" className="site bg-[#eff1f5] h-full overflow-hidden">
 
       <section id="panels">
         <div 

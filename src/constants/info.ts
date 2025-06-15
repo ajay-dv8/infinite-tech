@@ -49,10 +49,11 @@ export const generalInfo: generalInfoProps = {
   // phone line
   phoneLabel: "Phone",
   phoneDescription: "We're available Mon-Fri, 9am-5pm.",
+  
   phone: "+233 54 989 6135",
   phoneLink: "+233549896135",
-  phoneTwo: "+233 50 647 0919",
-  phoneTwoLink: "+233506470919", 
+  phoneTwo: "+233 20 145 8927",
+  phoneTwoLink: "+233201458927", 
 }
 
 
@@ -62,7 +63,7 @@ export const socials = [
     link: "https://x.com/infinit_tech_gh?t=2l1gejSLKSX4xkBtLNqnBw&s=09",
   }, 
   {
-    name: "linkedin",
+    name: "Linkedin",
     link: "https://www.linkedin.com/company/infinit-tech-solutions",
   },
 ]

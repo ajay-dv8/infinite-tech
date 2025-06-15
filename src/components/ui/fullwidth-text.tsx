@@ -4,12 +4,12 @@ import React, { useEffect, useRef } from 'react';
 import { cn } from '@/lib/utils';
 
 interface DynamicTextProps {
-  text: string;
+  text?: string;
   className?: string;
   color?: string;
 }
 
-export const FullwidthText = ({ text, className, color = "text-slate-700" }: DynamicTextProps) => {
+export const FullwidthText = ({ text, className, color = "" }: DynamicTextProps) => {
   const containerRef = useRef<HTMLDivElement | null>(null);
   const textRef = useRef<HTMLSpanElement | null>(null);
 

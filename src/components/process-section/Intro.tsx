@@ -15,7 +15,7 @@ export default function Intro() {
   const y = useTransform(scrollYProgress, [0, 1], ["0vh", "100vh"]);
 
   return (
-    <div className="overflow-hidden">
+    <div className="overflow-hidden bg-[#eff1f5]">
       <motion.div 
         style={{ y }} 
         className="relative h-full w-full"
