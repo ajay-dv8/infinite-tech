@@ -1,6 +1,6 @@
-.container {
+.zcontainer {
   height: 300vh;
-  width: 100%;
+  width: 100dvw;
   position: relative;
   .sticky {
     position: sticky;

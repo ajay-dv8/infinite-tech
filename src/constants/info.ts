@@ -11,6 +11,7 @@ interface generalInfoProps {
   officeLabel?: string
   officeDescription?: string
   officeAddress?: string
+  officeAddressTwo?: string
 
   phoneLabel?: string
   phoneDescription?: string
@@ -43,9 +44,10 @@ export const generalInfo: generalInfoProps = {
   emailLink: "infinittechsolutions.info@gmail.com",
   email: "info@its.com",
   // office location
-  officeLabel: "Office",
-  officeDescription: "Drop by our office for a chat.",
-  officeAddress: "1 Eagle St, Brisbane, QLD, 4000",
+  officeLabel: "Location",
+  officeDescription: "Meet up for a chat.",
+  officeAddress: "Koforidua, near poly traffic",
+  officeAddressTwo: "Accra, Lapaz",
   // phone line
   phoneLabel: "Phone",
   phoneDescription: "We're available Mon-Fri, 9am-5pm.",
@@ -64,6 +66,17 @@ export const socials = [
   }, 
   {
     name: "Linkedin",
+    link: "https://www.linkedin.com/company/infinit-tech-solutions",
+  },
+]
+
+export const branches = [
+  {
+    name: "Koforidua",
+    link: "https://x.com/infinit_tech_gh?t=2l1gejSLKSX4xkBtLNqnBw&s=09",
+  }, 
+  {
+    name: "Accra",
     link: "https://www.linkedin.com/company/infinit-tech-solutions",
   },
 ]

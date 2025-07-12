@@ -53,7 +53,7 @@ export const Jvideo = ({
 
   return (
     // Container with 16:9 aspect ratio using padding-bottom trick
-    <div className={cn("relative h-full w-full pb-[56.25%] bg-transparent rounded-xl", containerClassName)}>
+    <div className={cn("relative h-full w-full bg-transparent rounded-xl", containerClassName)}>
       <video
         ref={videoRef}
         poster={poster}

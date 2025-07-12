@@ -38,7 +38,9 @@ export default function Home() {
         <Industries /> 
         <Services />
         <TechStack/> 
-          <ZoomParallax /> 
+        <div className="w-full">
+          <ZoomParallax />
+        </div>  
         {/* <div className="bg-[#eff1f5]"> */}
           <Intro />
           <Description />

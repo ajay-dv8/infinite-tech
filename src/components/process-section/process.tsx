@@ -69,7 +69,7 @@ export default function Description() {
             >
               {/* ...panel content... */}
               {/* number and title with opacity */}
-              <div className="">
+              <div className="md:hidden lg:hidden xl:block">
                 <h1 className="p-2 rounded-full text-black text-2xl md:text-7xl font-bold opacity-10 mx-8">
                   0{process.number}.
                 </h1>
@@ -81,7 +81,7 @@ export default function Description() {
 
               {/* video div */}
               {/* TODO: change md:width */}
-              <div className="w-full flex justify-center">
+              <div className="w-full flex justify-center md:pt-10">
                 <div className="w-[90%] md:w-[720px] aspect-square md:aspect-video h-full">
                   <Jvideo
                     width={720}

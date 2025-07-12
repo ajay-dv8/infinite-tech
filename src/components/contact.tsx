@@ -159,15 +159,16 @@ export const Contact = () => {
           >
             {generalInfo.officeDescription}
           </motion.p>
-          <motion.a 
+          <motion.p 
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.9 }}
-            href="#" 
-            className="font-semibold"
+            // href="#" 
+            className="font-semibold flex flex-col"
           >
             <CenterUnderline label={generalInfo.officeAddress}/>
-          </motion.a>
+            <CenterUnderline label={generalInfo.officeAddressTwo}/>
+          </motion.p>
         </motion.div>
       </div>
     </section>

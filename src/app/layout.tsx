@@ -16,7 +16,7 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   title: "Infinit Tech Solutions",
   description:
-    "Empower your business with innovative software solutions from Infinit. We specialize in custom web development, UI/UX design, cloud integration, and digital transformation for startups and enterprises. Discover our proven expertise, client success stories, and cutting-edge technology to accelerate your growth.",
+    "Empower your business with innovative software solutions from Infinit Tech Solutions. We specialize in custom web development,web app and website development, mobile app develop, UI/UX design, cloud integration, and digital transformation for startups and enterprises. Discover our proven expertise, client success stories, and cutting-edge technology to accelerate your growth.",
 };
 
 export default function RootLayout({

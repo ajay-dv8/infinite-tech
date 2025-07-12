@@ -22,8 +22,8 @@ export default function Section() {
     >
       <div className="relative z-10 mix-blend-difference text-white w-full h-full flex flex-col items-center justify-center">
         <div className="w-full">
-          <FullwidthText text={generalInfo.name} className="opacity-10" />
-          <FullwidthText text="Tech Solutions" className="opacity-10" />
+          <FullwidthText text={generalInfo.name} className="opacity-10 md:-mt-10" />
+          <FullwidthText text="Tech Solutions" className="opacity-10 md:-mt-20" />
         </div>
       </div>
 

@@ -53,9 +53,9 @@ const ServiceCard = ({ service, index }: { service: ServiceType; index: number }
 
 export default function Services() {
   return (
-    <div id='services' className="flex flex-col md:flex-row md:justify-between px-4 md:px-20 mb-0 md:mb-20">
+    <div id='services' className="flex flex-col md:flex-row md:justify-between md:items-start px-4 md:px-20 mb-0 md:mb-20 md:gap-x-8">
       {/* Sticky Title Column */}
-      <div className="md:sticky md:top-0 self-start">
+      <div className="md:sticky md:top-0 self-start md:pr-4">
         <FullTitle
           title="Services"
           topSub="What we do"

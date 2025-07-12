@@ -61,8 +61,8 @@ export default function Index() {
   ];
 
   return (
-    <div ref={container} className={'container'}>
-      <div className="sticky">
+    <div ref={container} className={'zcontainer w-full'}>
+      <div className="sticky w-full">
         {pictures.map(({ src, scale }, index) => {
           return (
             <motion.div key={index} style={{ scale }} className={'el'}>
@@ -72,7 +72,7 @@ export default function Index() {
                     <Jvideo
                       src="/videos/inf.mp4" 
                       poster="/poster/inf.webp"
-                      className="object-fill rounded-none bg-[#eff1f5]"
+                      className="object-fill rounded-none bg-[#eff1f5] w-full"
                       containerClassName="rounded-none"
                     />
                   </div>
