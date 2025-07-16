@@ -3,6 +3,7 @@
 import { useState, useEffect, useRef } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import Link from 'next/link';
+import Image from 'next/image';
 import { navLinks } from '@/constants/nav-links';
 import { generalInfo, socials } from '@/constants/info';
 import { Menu, X } from 'lucide-react';
@@ -98,10 +99,17 @@ export default function Navbar() {
             {/* Logo */}
             <Link 
               href="#hero" 
-              className="text-xl sm:text-2xl font-bold bg-gradient-to-b from-white to-gray-300 bg-clip-text text-transparent hover:from-white hover:to-gray-400 transition-all duration-300"
               onClick={(e) => handleNavClick(e, '#hero')}
+              className="flex gap-x-3 text-xl sm:text-2xl font-bold bg-gradient-to-b from-white to-gray-300 bg-clip-text text-transparent hover:from-white hover:to-gray-400 transition-all duration-300"
             >
-              {generalInfo.name}
+              <Image
+                src="/logo.png"
+                alt="Infinit Logo"
+                width={100}
+                height={100}
+                className="h-8 w-8"
+              />
+              {generalInfo.shortName}
             </Link>
           </motion.div>
 

@@ -42,18 +42,20 @@ export const generalInfo: generalInfoProps = {
   emailLabel: "Email",
   emailDescription: "We respond to all emails within 24 hours.",
   emailLink: "infinittechsolutions.info@gmail.com",
-  email: "info@its.com",
+  email: "info@infinitts.com",
   // office location
   officeLabel: "Location",
   officeDescription: "Meet up for a chat.",
-  officeAddress: "Koforidua, near poly traffic",
+  officeAddress: "Koforidua, Ogua",
   officeAddressTwo: "Accra, Lapaz",
   // phone line
   phoneLabel: "Phone",
   phoneDescription: "We're available Mon-Fri, 9am-5pm.",
   
-  phone: "+233 54 989 6135",
-  phoneLink: "+233549896135",
+  // phone: "+233 54 989 6135",
+  // phoneLink: "+233549896135",
+  phone: "+233 55 331 9320",
+  phoneLink: "+233553319320",
   phoneTwo: "+233 20 145 8927",
   phoneTwoLink: "+233201458927", 
 }
