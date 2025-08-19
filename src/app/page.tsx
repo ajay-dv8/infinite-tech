@@ -3,6 +3,7 @@ import About from "@/components/about";
 import { Contact } from "@/components/contact";
 import { Footer } from "@/components/footer";
 import { HeroBg } from "@/components/hero";
+import Cases from "@/components/caseStudies";
 import { Industries } from "@/components/industries"; 
 import Description from "@/components/process-section/process";
 import Intro from "@/components/process-section/Intro";
@@ -35,6 +36,7 @@ export default function Home() {
       <ReactLenis root>
         <HeroBg />
         <About />
+        <Cases />
         <Industries /> 
         <Services />
         <TechStack/> 

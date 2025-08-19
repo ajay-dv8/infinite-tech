@@ -9,6 +9,7 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@radix-ui/react-dialog": "^1.1.15",
     "@react-three/drei": "^3.11.1-alpha.1",
     "@react-three/fiber": "^9.0.0-alpha.8",
     "@types/gsap": "^1.20.2",
@@ -23,7 +24,8 @@
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
     "tailwind-merge": "^3.2.0",
-    "three": "^0.177.0"
+    "three": "^0.177.0",
+    "vaul": "^1.1.2"
   },
   "devDependencies": {
     "@eslint/eslintrc": "^3",

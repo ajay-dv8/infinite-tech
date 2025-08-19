@@ -1,12 +1,20 @@
-import React from 'react'
+import React from 'react'        
+import { FullTitle } from './section-title'
+import { Projects } from './case-study/cases'
 
-const CaseStudies = () => {
+
+const Cases = () => {
   return (
     <div>
-      <h2>Case Studies</h2>
-      <p>Explore our successful projects and client collaborations.</p> 
+      <FullTitle
+          title="Cases"
+          description="Recent Projects"
+          className="my-10 md:my-20 text-white"
+        />
+
+      <Projects />
     </div>
   )
 }
 
-export default CaseStudies
+export default Cases

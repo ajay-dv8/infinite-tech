@@ -24,7 +24,7 @@ const HeroBg = () => {
           animate={{ opacity: 1 }}
           transition={{ duration: 1.2, delay: 0.6, ease: "easeInOut" }}
         >
-          Crafting innovative software solutions that drive your business forward
+          At Infinit Tech Solutions we craft innovative software solutions that drive your business forward
           with cutting-edge technology and exceptional user experiences.
         </motion.p>
       </div>

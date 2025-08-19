@@ -104,10 +104,7 @@ export default function Description() {
             </article>
           ))}
         </div>
-      </section>
-      {/* chaskele */}
+      </section> 
     </div>
   );
 }
-
-
