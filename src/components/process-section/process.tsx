@@ -69,7 +69,7 @@ export default function Description() {
             >
               {/* ...panel content... */}
               {/* number and title with opacity */}
-              <div className="md:hidden lg:hidden xl:block">
+              {/* <div className="md:hidden lg:hidden xl:block">
                 <h1 className="p-2 rounded-full text-black text-2xl md:text-7xl font-bold opacity-10 mx-8">
                   0{process.number}.
                 </h1>
@@ -77,7 +77,7 @@ export default function Description() {
                 <h2 className="text-gray-800 text-2xl md:text-6xl font-bold ml-16 md:ml-32 opacity-10">
                   {process.title}
                 </h2>
-              </div>
+              </div> */}
 
               {/* video div */}
               {/* TODO: change md:width */}
