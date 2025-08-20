@@ -23,7 +23,7 @@ export function Projects() {
             <DrawerTrigger asChild>
               <div 
                 onClick={() => handleCardClick(project)}
-                className="cursor-pointer mb-16 md:mb-68">
+                className="cursor-pointer mb-8 md:mb-68">
                 <ProjectCard
                   key={project.id}
                   name={project.name}
