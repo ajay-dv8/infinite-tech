@@ -18,7 +18,7 @@ export function Projects() {
     <div id="work" className='w-full px-10 mb-20' >
      <Drawer>
         {projects.map((project) => (
-          <div  className="sticky top-16" key={project.id}>
+          <div  className="md:sticky top-16" key={project.id}>
             {/* Use the trigger to open the drawer */}
             <DrawerTrigger asChild>
               <div 
