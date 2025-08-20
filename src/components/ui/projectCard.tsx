@@ -9,11 +9,11 @@ interface ProjectCardProps {
 
 export default function ProjectCard({ name, backgroundImage }: ProjectCardProps) {
   return (
-    <div className='w-full md:h-[85dvh] relative rounded-xl overflow-hidden group cursor-pointer transition-all duration-300 hover:shadow-lg'>
+    <div className='w-full aspect-video md:h-[85dvh] relative rounded-xl overflow-hidden group cursor-pointer transition-all duration-300 hover:shadow-lg'>
       <div className='absolute inset-0 bg-black/30 z-10 transition-opacity duration-300 group-hover:opacity-50'></div>
       {/* project name at top left */}
-      <div className='absolute top-0 left-0 p-6 z-20 text-white flex flex-col items-start'>
-        <h3 className='text-xl md:text-xl font-semibold'>{name}</h3>
+      <div className='absolute top-0 left-0 p-2 md:p-6 z-20 text-white flex flex-col items-start'>
+        <h3 className='text-base md:text-xl font-semibold'>{name}</h3>
         <div className='w-10 h-[2px] bg-green-500 mt-2 transition-all duration-300 group-hover:w-20'></div>
       </div>
       {/* View Case button in the center */}
